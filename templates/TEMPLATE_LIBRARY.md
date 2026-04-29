@@ -4,7 +4,37 @@ A collection of proven, high-converting sales page templates ready to use.
 
 ## Available Templates
 
-### 1. Professional Gold Template
+### 1. Minimal Serif Template
+**File:** `minimal-serif-template.html`
+
+**Best for:** Info products, frameworks, ebooks, educational offers under $100
+
+**Style:**
+- Minimalist, clean design
+- Light off-white background (#fafafa)
+- Georgia serif typography
+- Narrow width (700px) for focused reading
+- Long-form sales letter format
+- 3-part headline structure
+
+**Key Features:**
+- 3-part headline (pre-headline + hook + mechanism + outcome)
+- Long-form narrative structure
+- Objection handling sections
+- Guarantee callout box
+- Multiple CTAs throughout
+- No images required (text-only)
+
+**Colors:**
+- Background: #fafafa (off-white)
+- Text: #2d2d2d (dark gray)
+- Accent Orange: #f59e0b (pre-headline)
+- CTA Green: #16a34a (buttons, prices)
+- Guarantee: #fef3c7 (cream/yellow)
+
+---
+
+### 2. Professional Gold Template
 **File:** `professional-gold-template.html`
 
 **Best for:** Courses, coaching programs, professional services
@@ -60,10 +90,11 @@ A collection of proven, high-converting sales page templates ready to use.
 
 ## Quick Reference
 
-| Template | Style | Best For | Main Colors |
-|----------|-------|----------|-------------|
-| Professional Gold | Clean, light | Courses, coaching | Navy, Gold, White |
-| Dark Cyan | Modern, dark | Tech, SaaS, digital | Dark navy, Cyan, Gold |
+| Template | Style | Best For | Main Colors | Complexity |
+|----------|-------|----------|-------------|------------|
+| Minimal Serif | Minimal, text-focused | Info products, frameworks | Off-white, Black, Green | Low |
+| Professional Gold | Clean, structured | Courses, coaching | Navy, Gold, White | Medium |
+| Dark Cyan | Modern, dark | Tech, SaaS, digital | Dark navy, Cyan, Gold | Medium |
 
 ## How to Use
 
@@ -80,11 +111,14 @@ Templates follow this naming pattern:
 [STYLE]-[PRIMARY_COLOR]-template.html
 ```
 
-Examples:
-- `professional-gold-template.html`
-- `dark-cyan-template.html`
-- `minimal-black-template.html` (future)
-- `bold-red-template.html` (future)
+Current Templates:
+- `minimal-serif-template.html` - Light, text-focused, serif typography
+- `professional-gold-template.html` - Clean, structured, gold accents
+- `dark-cyan-template.html` - Dark theme, cyan accents
+
+Future Templates:
+- `bold-red-template.html` (planned)
+- `elegant-purple-template.html` (planned)
 
 ## Template Index
 
@@ -103,10 +137,10 @@ All templates are in:
 ## Future Templates
 
 Planned additions:
-- Minimal Black (ultra-clean, black & white)
 - Bold Red (high-energy, red accents)
-- Soft Pastel (gentle, muted colors)
+- Elegant Purple (premium, sophisticated)
 - Corporate Blue (professional, trustworthy)
+- Soft Pastel (gentle, muted colors)
 
 ---
 
