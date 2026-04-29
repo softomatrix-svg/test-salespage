@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local SEO Domination Playbook - Rank #1 on Google Maps</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0c0a09; color: #fafaf9; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .hero { background: linear-gradient(135deg, #1c1917 0%, #0c0a09 50%, #1c1917 100%); padding: 100px 0 80px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 30%, rgba(249, 115, 22, 0.08) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(239, 68, 68, 0.06) 0%, transparent 50%); pointer-events: none; }
+        .eyebrow { color: #f97316; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 24px; position: relative; }
+        .hero h1 { font-size: 3.75rem; font-weight: 800; line-height: 1.1; margin-bottom: 28px; max-width: 950px; margin-left: auto; margin-right: auto; position: relative; }
+        .hero h1 .highlight { background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subheadline { font-size: 1.35rem; color: #a8a29e; max-width: 700px; margin: 0 auto 48px; font-weight: 400; }
+        .video-container { max-width: 850px; margin: 48px auto; background: linear-gradient(135deg, #292524 0%, #1c1917 100%); border-radius: 20px; padding: 24px; border: 1px solid #44403c; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); position: relative; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; }
+        .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 12px; }
+        .cta-button { display: inline-block; background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); color: #ffffff; font-size: 1.25rem; font-weight: 700; padding: 22px 56px; border-radius: 12px; text-decoration: none; margin-top: 40px; transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(249, 115, 22, 0.4); position: relative; overflow: hidden; }
+        .cta-button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 20px 50px rgba(249, 115, 22, 0.5); }
+        .problem { padding: 100px 0; background: #0c0a09; position: relative; }
+        .problem h2 { font-size: 2.75rem; text-align: center; margin-bottom: 20px; }
+        .problem h2 .highlight { color: #ef4444; }
+        .problem-intro { text-align: center; color: #a8a29e; font-size: 1.25rem; max-width: 700px; margin: 0 auto 64px; }
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 48px; }
+        .problem-card { background: linear-gradient(135deg, #1c1917 0%, #292524 100%); border: 1px solid #44403c; border-radius: 16px; padding: 32px; transition: all 0.3s ease; }
+        .problem-card:hover { border-color: #f97316; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        .problem-card h3 { color: #f97316; font-size: 1.15rem; margin-bottom: 14px; font-weight: 600; }
+        .problem-card p { color: #a8a29e; line-height: 1.7; }
+        .solution { padding: 100px 0; background: linear-gradient(180deg, #1c1917 0%, #0c0a09 100%); position: relative; }
+        .solution::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #f97316, transparent); }
+        .solution h2 { font-size: 2.75rem; text-align: center; margin-bottom: 20px; }
+        .solution h2 .highlight { background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .solution-intro { text-align: center; color: #a8a29e; font-size: 1.25rem; max-width: 700px; margin: 0 auto 64px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; margin-top: 48px; }
+        .feature-card { background: linear-gradient(135deg, #1c1917 0%, #292524 100%); border: 1px solid #44403c; border-radius: 16px; padding: 32px; display: flex; gap: 20px; transition: all 0.3s ease; }
+        .feature-card:hover { border-color: #f97316; transform: translateY(-4px); }
+        .feature-icon { width: 56px; height: 56px; background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.75rem; flex-shrink: 0; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3); }
+        .feature-content h3 { font-size: 1.2rem; margin-bottom: 10px; color: #fafaf9; font-weight: 600; }
+        .feature-content p { color: #a8a29e; font-size: 0.95rem; line-height: 1.7; }
+        .timeline { padding: 100px 0; background: #0c0a09; }
+        .timeline h2 { font-size: 2.75rem; text-align: center; margin-bottom: 64px; }
+        .timeline h2 .highlight { color: #22c55e; }
+        .timeline-container { max-width: 850px; margin: 0 auto; }
+        .timeline-item { display: flex; gap: 28px; margin-bottom: 48px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: 27px; top: 64px; bottom: -48px; width: 2px; background: linear-gradient(180deg, #f97316 0%, #44403c 100%); }
+        .timeline-item:last-child::before { display: none; }
+        .timeline-number { width: 56px; height: 56px; background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; color: #ffffff; flex-shrink: 0; z-index: 1; box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3); }
+        .timeline-content h3 { font-size: 1.3rem; margin-bottom: 10px; color: #fafaf9; font-weight: 600; }
+        .timeline-content p { color: #a8a29e; line-height: 1.7; }
+        .pricing { padding: 100px 0; background: linear-gradient(180deg, #1c1917 0%, #0c0a09 100%); position: relative; }
+        .pricing::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #22c55e, transparent); }
+        .pricing h2 { font-size: 2.75rem; text-align: center; margin-bottom: 20px; }
+        .pricing-intro { text-align: center; color: #a8a29e; font-size: 1.25rem; max-width: 700px; margin: 0 auto 64px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; max-width: 1150px; margin: 0 auto; }
+        .pricing-card { background: linear-gradient(135deg, #1c1917 0%, #292524 100%); border: 1px solid #44403c; border-radius: 20px; padding: 48px 36px; text-align: center; position: relative; transition: all 0.3s ease; }
+        .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); }
+        .pricing-card.featured { border: 2px solid #f97316; transform: scale(1.05); box-shadow: 0 0 60px rgba(249, 115, 22, 0.15); }
+        .pricing-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+        .pricing-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 8px 20px; border-radius: 20px; letter-spacing: 1px; }
+        .pricing-card h3 { font-size: 1.5rem; margin-bottom: 16px; color: #fafaf9; font-weight: 600; }
+        .pricing-card .price { font-size: 3.5rem; font-weight: 800; margin: 28px 0; background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .pricing-card .price span { font-size: 1rem; color: #78716c; font-weight: 400; -webkit-text-fill-color: #78716c; }
+        .pricing-card ul { list-style: none; text-align: left; margin: 36px 0; }
+        .pricing-card ul li { padding: 14px 0; color: #d6d3d1; padding-left: 36px; position: relative; font-size: 0.95rem; border-bottom: 1px solid #44403c; }
+        .pricing-card ul li:last-child { border-bottom: none; }
+        .pricing-card ul li::before { content: '✓'; position: absolute; left: 0; color: #22c55e; font-weight: 700; font-size: 1.1rem; }
+        .pricing-card .cta-button { width: 100%; margin-top: 28px; padding: 18px 36px; font-size: 1.1rem; }
+        .guarantee { padding: 100px 0; background: #0c0a09; text-align: center; position: relative; }
+        .guarantee::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #22c55e, transparent); }
+        .guarantee-badge { width: 120px; height: 120px; background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 36px; font-size: 2rem; font-weight: 800; color: #ffffff; box-shadow: 0 20px 50px rgba(34, 197, 94, 0.3); position: relative; }
+        .guarantee-badge::after { content: ''; position: absolute; inset: -8px; border: 2px solid rgba(34, 197, 94, 0.3); border-radius: 50%; }
+        .guarantee h2 { font-size: 2.75rem; margin-bottom: 24px; }
+        .guarantee p { color: #a8a29e; font-size: 1.25rem; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        .faq { padding: 100px 0; background: linear-gradient(180deg, #1c1917 0%, #0c0a09 100%); position: relative; }
+        .faq::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #44403c, transparent); }
+        .faq h2 { font-size: 2.75rem; text-align: center; margin-bottom: 64px; }
+        .faq-container { max-width: 850px; margin: 0 auto; }
+        .faq-item { background: linear-gradient(135deg, #1c1917 0%, #292524 100%); border: 1px solid #44403c; border-radius: 16px; padding: 32px; margin-bottom: 20px; transition: all 0.3s ease; }
+        .faq-item:hover { border-color: #f97316; transform: translateX(8px); }
+        .faq-item h3 { font-size: 1.15rem; margin-bottom: 14px; color: #f97316; font-weight: 600; }
+        .faq-item p { color: #a8a29e; line-height: 1.8; }
+        .final-cta { padding: 120px 0; background: linear-gradient(135deg, #1c1917 0%, #0c0a09 50%, #1c1917 100%); text-align: center; position: relative; overflow: hidden; }
+        .final-cta::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.1) 0%, transparent 50%); pointer-events: none; }
+        .final-cta h2 { font-size: 3rem; margin-bottom: 24px; position: relative; }
+        .final-cta p { color: #a8a29e; font-size: 1.25rem; max-width: 650px; margin: 0 auto 48px; line-height: 1.8; position: relative; }
+        .final-cta .cta-button { font-size: 1.35rem; padding: 24px 64px; position: relative; }
+        footer { padding: 48px 0; background: #0c0a09; text-align: center; color: #78716c; border-top: 1px solid #292524; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .subheadline { font-size: 1.1rem; } .pricing-card.featured { transform: none; } .pricing-card.featured:hover { transform: translateY(-8px); } .features-grid, .problem-grid { grid-template-columns: 1fr; } .cta-button { padding: 18px 40px; font-size: 1.1rem; } }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="eyebrow">Attention Local Business Owners</div>
+            <h1>How to <span class="highlight">Rank #1 on Google Maps</span> in 30 Days Without Hiring an Expensive Agency</h1>
+            <p class="subheadline">The complete step-by-step system for plumbers, dentists, contractors, and service businesses who'd rather fix toilets than learn marketing</p>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls playsinline><source src="https://pwmkt.com/ari.mp4#t=2" type="video/mp4">Your browser does not support the video tag.</video>
+                </div>
+            </div>
+            <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
+        </div>
+    </section>
+
+    <section class="problem">
+        <div class="container">
+            <h2>Are You <span class="highlight">Invisible</span> to Customers Who Need You Right Now?</h2>
+            <p class="problem-intro">Every day, hundreds of people in your city search for exactly what you offer. But they find your competitors instead.</p>
+            <div class="problem-grid">
+                <div class="problem-card"><h3>🔍 The "Best [Service] Near Me" Problem</h3><p>When someone searches "best plumber near me" or "emergency dentist [your city]" — you're not showing up. Your competitors are stealing those calls.</p></div>
+                <div class="problem-card"><h3>💸 The Agency Trap</h3><p>Marketing agencies charge $2,000-$5,000/month with 6-month contracts. You pay whether you get results or not. Most small businesses can't afford that gamble.</p></div>
+                <div class="problem-card"><h3>😵 The DIY Overwhelm</h3><p>You've tried learning SEO from YouTube. But every video contradicts the last one. Technical jargon, conflicting advice, and no clear action plan.</p></div>
+                <div class="problem-card"><h3>📉 The Slow Death</h3><p>Month after month, fewer calls. Fewer leads. Your competitors with worse reviews and higher prices are booking jobs that should be yours.</p></div>
+                <div class="problem-card"><h3>⏰ The Time Problem</h3><p>You're already working 50+ hours/week. You don't have time to become a marketing expert. You need customers, not another job.</p></div>
+                <div class="problem-card"><h3>🎲 The Hope Strategy</h3><p>Word of mouth used to work. Now? You're hoping the phone rings. Hope is not a business strategy — and it's definitely not paying your bills.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <h2>Introducing the <span class="highlight">Local SEO Domination Playbook</span></h2>
+            <p class="solution-intro">The only local SEO system designed specifically for business owners who'd rather fix toilets, pull teeth, or build houses than learn marketing.</p>
+            <div class="features-grid">
+                <div class="feature-card"><div class="feature-icon">📋</div><div class="feature-content"><h3>30-Day Action Plan</h3><p>No guessing. No overwhelm. Just follow the daily checklist and watch your rankings climb. Designed for busy business owners with zero marketing experience.</p></div></div>
+                <div class="feature-card"><div class="feature-icon">🎯</div><div class="feature-content"><h3>Google Maps Optimization</h3><p>The exact steps to claim, verify, and optimize your Google Business Profile. Most businesses do this wrong — you'll do it right.</p></div></div>
+                <div class="feature-card"><div class="feature-icon">⭐</div><div class="feature-content"><h3>Review Generation System</h3><p>Ethical, automated templates to get more 5-star reviews without begging. Reviews = trust = phone calls = revenue.</p></div></div>
+                <div class="feature-card"><div class="feature-icon">🔗</div><div class="feature-content"><h3>Local Link Building</h3><p>Simple ways to get other local websites linking to yours. No outreach required. Just smart positioning in your community.</p></div></div>
+                <div class="feature-card"><div class="feature-icon">📱</div><div class="feature-content"><h3>Citation Building Templates</h3><p>Get listed on 50+ directories that Google trusts. Copy-paste templates included. Takes 2 hours, works forever.</p></div></div>
+                <div class="feature-card"><div class="feature-icon">📊</div><div class="feature-content"><h3>Rank Tracking Dashboard</h3><p>Simple spreadsheet to track your progress. Watch yourself move from page 3 to page 1 to position #1.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <div class="container">
+            <h2>Your <span class="highlight">30-Day Roadmap</span> to #1 Rankings</h2>
+            <div class="timeline-container">
+                <div class="timeline-item"><div class="timeline-number">1</div><div class="timeline-content"><h3>Days 1-3: Foundation Setup</h3><p>Claim and optimize your Google Business Profile. Fix the 7 critical mistakes 90% of businesses make. Set up tracking so you know what's working.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">2</div><div class="timeline-content"><h3>Days 4-10: Citation Blitz</h3><p>Get listed on the 50 most important directories. Use our copy-paste templates. This alone often jumps you 10+ positions.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">3</div><div class="timeline-content"><h3>Days 11-17: Review Machine</h3><p>Deploy our ethical review request system. Turn happy customers into online advocates. Watch your star rating and review count climb.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">4</div><div class="timeline-content"><h3>Days 18-24: Content & Links</h3><p>Create simple, effective content that Google loves. Build local links without cold outreach. Position yourself as the local authority.</p></div></div>
+                <div class="timeline-item"><div class="timeline-number">5</div><div class="timeline-content"><h3>Days 25-30: Optimize & Scale</h3><p>Fine-tune based on results. Double down on what's working. Lock in your #1 position and start capturing competitor traffic.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your <span class="highlight">Domination Package</span></h2>
+            <p class="pricing-intro">Everything you need to rank #1 on Google Maps. No monthly fees. No contracts. Just results.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Core Playbook</h3>
+                    <div class="price">$297 <span>one-time</span></div>
+                    <ul><li>Complete video course (6+ hours)</li><li>30-day action plan PDF</li><li>Google Business Profile optimization guide</li><li>Review request templates</li><li>Citation building checklist</li><li>Rank tracking spreadsheet</li><li>Email support (30 days)</li></ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro Package</h3>
+                    <div class="price">$497 <span>one-time</span></div>
+                    <ul><li>Everything in Core Playbook</li><li>Done-for-you GMB optimization service</li><li>Advanced review generation system</li><li>Competitor analysis template</li><li>Local link building strategy guide</li><li>Monthly content calendar</li><li>Priority email support (60 days)</li><li>Private community access</li></ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Pro Access</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Done-With-You</h3>
+                    <div class="price">$1,297 <span>one-time</span></div>
+                    <ul><li>Everything in Pro Package</li><li>2x 60-min strategy calls</li><li>Custom action plan for your business</li><li>Personal GMB audit & optimization</li><li>Direct access via Slack (30 days)</li><li>Monthly check-in calls (3 months)</li><li>Guaranteed ranking improvement*</li></ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">30</div>
+            <h2>30-Day "Rank or Refund" Guarantee</h2>
+            <p>Follow the playbook for 30 days. If you don't see measurable improvement in your Google Maps ranking, I'll refund every penny. No questions, no hassle. You either rank higher or you pay nothing.</p>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item"><h3>Do I need any technical skills?</h3><p>Absolutely not. If you can use Google and send emails, you can follow this playbook. I specifically designed it for business owners who hate technology.</p></div>
+                <div class="faq-item"><h3>How long until I see results?</h3><p>Most businesses see ranking improvements within 2-3 weeks. By day 30, you should be significantly higher — often on page 1 or in the top 3 map results.</p></div>
+                <div class="faq-item"><h3>Will this work for my industry?</h3><p>If you're a local service business (plumber, dentist, contractor, lawyer, realtor, restaurant, etc.), yes. The playbook is industry-agnostic but specifically designed for local service businesses.</p></div>
+                <div class="faq-item"><h3>What if I don't have a website?</h3><p>You don't need one to start. Google Business Profile is free and often enough to rank #1. The playbook includes a simple website setup guide if you want one later.</p></div>
+                <div class="faq-item"><h3>Is there a monthly fee?</h3><p>No. This is a one-time purchase. You get lifetime access to the course and all future updates. No subscriptions, no hidden fees.</p></div>
+                <div class="faq-item"><h3>What if my competitors are already doing SEO?</h3><p>Perfect — that means there's proven demand. Most "SEO-optimized" local businesses are doing it wrong. You'll outrank them by doing the basics better than they do the advanced stuff.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop Being Invisible. Start Getting Calls.</h2>
+            <p>Every day you wait is another day your competitors book the jobs that should be yours. In 30 days, you could be #1 on Google Maps — or you could still be hoping the phone rings.</p>
+            <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Local SEO Domination Playbook. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
