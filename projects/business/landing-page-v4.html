@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Getting Generic AI Outputs — Write High-Converting Copy in Minutes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, 'Palatino Linotype', serif;
+            line-height: 1.65;
+            color: #2d3748;
+            background: #fafafa;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a0f1e 0%, #1a1a2e 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero .social-proof-top {
+            color: #10b981;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-size: 40px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero .subheadline {
+            font-size: 20px;
+            color: #a0aec0;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        
+        .offer-clarity-box {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px auto;
+            max-width: 500px;
+            text-align: left;
+        }
+        
+        .offer-clarity-box h3 {
+            color: #f59e0b;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .offer-clarity-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .offer-clarity-box li {
+            color: #e2e8f0;
+            font-size: 16px;
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .offer-clarity-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: 700;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #16a34a;
+            color: #fff;
+            padding: 20px 48px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+            margin-top: 16px;
+        }
+        
+        .cta-button:hover {
+            background: #15803d;
+        }
+        
+        .micro-reassurance {
+            color: #718096;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+        
+        /* Pain Section */
+        .pain-section {
+            background: #fef2f2;
+            padding: 60px 0;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .pain-section h2 {
+            color: #991b1b;
+            font-size: 28px;
+            margin-bottom: 32px;
+        }
+        
+        .pain-point {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .pain-point h3 {
+            color: #dc2626;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .pain-point p {
+            margin: 0;
+            color: #4b5563;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-light {
+            background: #f7fafc;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            line-height: 1.65;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        /* 3-Step Visual */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .step-box {
+            background: white;
+            border-radius: 12px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+        
+        .step-box h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #0a0f1e;
+        }
+        
+        .step-box p {
+            font-size: 15px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Proof Examples */
+        .example-box {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        
+        .example-box h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #0a0f1e;
+        }
+        
+        .prompt-box {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            margin-bottom: 16px;
+            font-family: monospace;
+            font-size: 13px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .output-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 16px;
+            font-size: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .output-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #16a34a;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            color: #374151;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #0a0f1e;
+        }
+        
+        .testimonial-role {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .testimonial-result {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+        
+        /* Why This Works */
+        .why-box {
+            background: linear-gradient(135deg, #0a0f1e 0%, #1e3a5f 100%);
+            color: white;
+            padding: 48px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+        
+        .why-box h3 {
+            color: #fbbf24;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .why-box p {
+            color: #e2e8f0;
+            font-size: 17px;
+        }
+        
+        /* Pricing */
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .pricing-card.popular {
+            border: 3px solid #16a34a;
+            transform: scale(1.05);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #16a34a;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #0a0f1e;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 800;
+            color: #16a34a;
+            margin: 16px 0;
+        }
+        
+        .price .original {
+            font-size: 20px;
+            color: #9ca3af;
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 24px 0;
+            padding: 0;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0 10px 28px;
+            position: relative;
+            font-size: 15px;
+            color: #4b5563;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .pricing-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-weight: 700;
+        }
+        
+        .value-stack {
+            background: #fef3c7;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+        }
+        
+        /* Urgency */
+        .urgency-bar {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 32px 0;
+        }
+        
+        .urgency-bar p {
+            margin: 0;
+            color: #991b1b;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        /* Guarantee */
+        .guarantee-box {
+            background: #f0fdf4;
+            border: 3px solid #16a34a;
+            padding: 40px;
+            text-align: center;
+            border-radius: 16px;
+            margin: 48px 0;
+        }
+        
+        .guarantee-box h2 {
+            color: #166534;
+            margin-bottom: 16px;
+        }
+        
+        .guarantee-box p {
+            color: #374151;
+            margin-bottom: 12px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 48px 0;
+            border-top: 1px solid #e5e7eb;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .pricing-card.popular {
+                transform: none;
+            }
+            
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="social-proof-top">⭐⭐⭐⭐⭐ Trusted by 500+ Marketers</p>
+            <h1>Stop Getting Generic AI Outputs — Write High-Converting Emails, Ads & Content in Minutes</h1>
+            <p class="subheadline">The proven prompt system that transforms ChatGPT and Claude into your personal copywriting assistant (even if your prompts suck right now)</p>
+            
+            <div class="offer-clarity-box">
+                <h3>What You Get:</h3>
+                <ul>
+                    <li>5-Step AI Prompt Framework</li>
+                    <li>150+ High-Converting Prompts</li>
+                    <li>Copy Templates (Email, Ads, Social)</li>
+                    <li>Cheat Sheets + Real Examples</li>
+                </ul>
+            </div>
+            
+            <a href="#offer" class="cta-button">Get Instant Access — Start Writing Better Copy Now</a>
+            <p class="micro-reassurance">30-day guarantee • Works with ChatGPT, Claude & Gemini</p>
+        </div>
+    </section>
+
+    <!-- Pain Section -->
+    <section class="pain-section">
+        <div class="container">
+            <h2>Does This Sound Familiar?</h2>
+            
+            <div class="pain-point">
+                <h3>😤 You type prompts… and get garbage</h3>
+                <p>"Write an email about our product" produces bland, robotic text that sounds like every other marketing message on the internet.</p>
+            </div>
+            
+            <div class="pain-point">
+                <h3>😫 Everything sounds the same</h3>
+                <p>No matter how you phrase it, AI gives you generic output that doesn't match your brand voice or stand out from competitors.</p>
+            </div>
+            
+            <div class="pain-point">
+                <h3>⏰ You waste time rewriting AI outputs</h3>
+                <p>You spend 30 minutes tweaking a prompt, then another 30 minutes fixing what AI produced. You could have written it yourself in 20 minutes.</p>
+            </div>
+            
+            <div class="pain-point">
+                <h3>😰 Your competitors are pulling ahead</h3>
+                <p>While you struggle with basic content, they're publishing daily, launching campaigns, and capturing the customers who should be yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>There's a Better Way</h2>
+            
+            <p>What if you could enter a prompt and get exactly what you need—on the first try?</p>
+            
+            <p>What if AI actually sounded like your brand, matched your voice, and produced content you could use with minimal editing?</p>
+            
+            <p><strong>That's not a fantasy. It's what happens when you use the right system.</strong></p>
+            
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <h4>Enter Structured Prompt</h4>
+                    <p>Use our proven framework for your specific task</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <h4>AI Generates Quality Output</h4>
+                    <p>Get content that matches your brand and converts</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <h4>Publish & Scale Faster</h4>
+                    <p>Minor tweaks, then publish. Create more in less time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Real Results from Real Marketers</h2>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I was spending 6 hours on content that now takes 90 minutes. The difference is night and day. These frameworks are game-changing."</p>
+                <p class="testimonial-author">Sarah K.</p>
+                <p class="testimonial-role">Content Director, SaaS Company</p>
+                <span class="testimonial-result">↓ 75% time reduction</span>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"My team went from struggling with AI to producing client-ready copy in one session. Our email open rates increased 40%. Worth 10x the price."</p>
+                <p class="testimonial-author">Mike R.</p>
+                <p class="testimonial-role">Agency Owner</p>
+                <span class="testimonial-result">↑ 40% open rate increase</span>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I doubled my client capacity without working more hours. These prompts are my secret weapon. I deliver better work in half the time."</p>
+                <p class="testimonial-author">Jennifer L.</p>
+                <p class="testimonial-role">Freelance Copywriter</p>
+                <span class="testimonial-result">2x client capacity</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>See the Difference</h2>
+            <p>Here's what changes when you use the right system:</p>
+            
+            <div class="example-box">
+                <h4>❌ BEFORE: What Most Marketers Do</h4>
+                <div class="prompt-box">
+                    Prompt: "Write an email about our new project management tool"
+                </div>
+                <div class="output-box">
+                    <div class="output-label">AI Output:</div>
+                    "Introducing our new project management tool. It helps you manage projects better. Sign up today to get started..."
+                </div>
+                <p style="margin-top: 12px; color: #dc2626; font-weight: 600;">Result: Generic, boring, unusable. You spend 30 minutes rewriting it.</p>
+            </div>
+            
+            <div class="example-box">
+                <h4>✅ AFTER: Using the Structured Framework</h4>
+                <div class="prompt-box">
+                    Prompt: "You are a conversion copywriter with 10 years of experience. Write a launch email for [product] aimed at [specific audience] struggling with [pain point]. Include: compelling subject line, specific story, solution, social proof, clear CTA. Tone: professional but conversational. Length: under 200 words."
+                </div>
+                <div class="output-box">
+                    <div class="output-label">AI Output:</div>
+                    "Subject: The project management mistake costing agencies $10K/month...<br><br>Last Tuesday, Sarah stared at her inbox at 11 PM... [engaging story]...<br><br>That's why we built [Product]. It eliminates client communication chaos by...<br><br>Join 500+ agencies already saving 10 hours/week...<br><br>[Clear CTA]"
+                </div>
+                <p style="margin-top: 12px; color: #16a34a; font-weight: 600;">Result: Specific, engaging, ready to use. Minor tweaks, then send. Saved 25 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="why-box">
+                <h3>Why This System Works (When Random Prompts Don't)</h3>
+                <p>Most people use AI wrong. They give vague instructions and expect great output. It's like asking a chef to "make something good" and being disappointed with the result.</p>
+                <p style="margin-top: 16px;"><strong>This system fixes that.</strong></p>
+                <p>It gives you structured frameworks used by top marketers—specific prompt architectures that guide AI to produce exactly what you need. No guessing. No hoping. Just reliable, high-quality output every time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>Everything You Need to Master AI Prompting</h2>
+            
+            <h3>5-Module Video Course</h3>
+            <p><strong>Module 1:</strong> The Foundation — Why most prompts fail and how to fix them<br>
+            <strong>Module 2:</strong> The 5 Frameworks — Complete system with decision trees<br>
+            <strong>Module 3:</strong> Marketing Applications — Emails, ads, social, SEO, content<br>
+            <strong>Module 4:</strong> Advanced Techniques — Troubleshooting, edge cases, updates<br>
+            <strong>Module 5:</strong> Implementation — Workflows, measurement, scaling</p>
+            
+            <h3>150+ Proven Prompts (Organized by Use Case)</h3>
+            <p>25 Email prompts • 25 Social media prompts • 25 Copywriting prompts • 25 Content strategy prompts • 25 SEO prompts • 25 Advertising prompts</p>
+            
+            <h3>Quick-Reference Resources</h3>
+            <p>5 Frameworks at a Glance • 50 High-Impact Prompts • Troubleshooting Guide • Monthly updates with new prompts</p>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="section section-light" id="offer">
+        <div class="container">
+            <h2>Choose Your Package</h2>
+            
+            <div class="urgency-bar">
+                <p>⚡ LAUNCH SPECIAL: Save $200 — Offer ends in 48 hours or when 100 spots fill (73/100 taken)</p>
+            </div>
+            
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$197</div>
+                    <ul>
+                        <li>5-module course</li>
+                        <li>150+ prompts</li>
+                        <li>Cheat sheets</li>
+                        <li>Community access</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="padding: 16px 32px; font-size: 16px;" onclick="alert('Stripe checkout coming soon')">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price"><span class="original">$497</span> $297</div>
+                    <div class="value-stack">💰 You save $200 — Best value</div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Monthly prompt updates</li>
+                        <li>Advanced frameworks</li>
+                        <li>Case study library</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming soon')">Get Professional</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Agency</h3>
+                    <div class="price">$497</div>
+                    <ul>
+                        <li>Everything in Pro</li>
+                        <li>Team license (5 users)</li>
+                        <li>White-label rights</li>
+                        <li>Strategy call included</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="padding: 16px 32px; font-size: 16px;" onclick="alert('Stripe checkout coming soon')">Get Agency</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>30-Day "Better Prompts or Your Money Back" Guarantee</h2>
+                <p>Use the course. Apply the frameworks. Try the prompts.</p>
+                <p>If you don't see measurable improvement in your AI output quality—if you're not creating better content in less time—I'll refund every penny.</p>
+                <p><strong>No questions. No hassle. No risk.</strong></p>
+                <p style="margin-top: 20px; font-size: 16px;">You either master AI prompting, or you pay nothing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-light">
+        <div class="container" style="text-align: center;">
+            <h2>Every Day You Wait Is Another Day of Missed Opportunities</h2>
+            <p>Your competitors are already using AI effectively. The gap is widening.</p>
+            <p>Join 500+ marketers who've transformed their results and cut their content time by 70%.</p>
+            <a href="#offer" class="cta-button" style="margin-top: 32px;">Get Instant Access — Start Writing Better Copy Now</a>
+            <p style="margin-top: 20px; color: #6b7280; font-size: 14px;">30-Day Money-Back Guarantee • Launch pricing ends soon</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Prompt Mastery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

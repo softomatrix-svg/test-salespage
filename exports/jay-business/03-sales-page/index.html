@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workflow Templates — Automate Your Business in 5 Minutes</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { 
+            --primary: #0a0f1e; 
+            --secondary: #141414; 
+            --card: rgba(20, 25, 40, 0.9);
+            --border: #233047;
+            --cyan: #00d9ff;
+            --yellow: #fbbf24;
+            --green: #10b981;
+            --text: #e2e8f0;
+            --text-dim: #94a3b8;
+            --muted: #64748b;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: var(--text); background: linear-gradient(180deg, var(--primary), #0d1117 45%, var(--secondary)); font-size: 18px; }
+        section { padding: 70px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        .hero { text-align: center; padding: 100px 20px 80px; }
+        .eyebrow { color: var(--cyan); font-size: 14px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
+        
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 25px; color: white; }
+        .hero h1 .highlight { color: var(--yellow); }
+        .hero-subtitle { font-size: 1.3rem; color: var(--text-dim); max-width: 600px; margin: 0 auto 40px; line-height: 1.6; }
+        
+        .video-placeholder { background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(251, 191, 36, 0.1)); border: 2px dashed var(--border); border-radius: 16px; padding: 60px 40px; margin: 40px auto; max-width: 700px; text-align: center; }
+        .video-placeholder p { color: var(--muted); font-size: 1.1rem; }
+        
+        .cta-button { display: inline-block; background: var(--yellow); color: #111; padding: 20px 48px; font-size: 1.2rem; font-weight: 800; text-decoration: none; border-radius: 12px; transition: all 0.2s; margin: 10px; }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(251, 191, 36, 0.35); }
+        .cta-outline { background: transparent; color: var(--text); border: 2px solid var(--border); }
+        
+        .micro-reassurance { margin-top: 25px; font-size: 0.95rem; color: var(--text-dim); }
+        
+        h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 30px; line-height: 1.2; color: white; text-align: center; }
+        h3 { font-size: 1.4rem; font-weight: 700; margin: 40px 0 20px; color: var(--cyan); }
+        p { margin-bottom: 20px; line-height: 1.8; color: var(--text-dim); font-size: 1.05rem; }
+        strong { color: var(--text); font-weight: 700; }
+        
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .problem-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; }
+        .problem-card h4 { color: var(--yellow); font-size: 1.2rem; margin-bottom: 12px; }
+        
+        .highlight-box { background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(251, 191, 36, 0.1)); border: 1px solid var(--border); padding: 35px; border-radius: 16px; margin: 40px 0; text-align: center; }
+        .highlight-box p { margin: 0; font-size: 1.3rem; color: white; font-weight: 600; }
+        
+        .steps { margin: 40px 0; }
+        .step { display: flex; gap: 25px; margin: 25px 0; padding: 30px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; }
+        .step-number { flex-shrink: 0; width: 50px; height: 50px; background: var(--cyan); color: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; }
+        .step-content h4 { margin: 0 0 10px 0; font-size: 1.2rem; color: white; }
+        .step-content p { margin: 0; }
+        
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0; }
+        .card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; text-align: center; }
+        .card h4 { color: var(--cyan); font-size: 1.2rem; margin-bottom: 12px; }
+        .card p { margin: 0; font-size: 0.95rem; }
+        
+        .pricing { text-align: center; padding: 80px 20px; }
+        .price { font-size: clamp(3.5rem, 8vw, 5rem); font-weight: 900; color: var(--green); margin: 20px 0; }
+        .price-note { font-size: 1.2rem; color: var(--muted); margin-bottom: 30px; }
+        .price-features { max-width: 400px; margin: 30px auto; text-align: left; }
+        .price-features li { color: var(--text-dim); margin: 12px 0; list-style: none; padding-left: 30px; position: relative; }
+        .price-features li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: bold; }
+        
+        .guarantee { background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(34, 211, 238, 0.1)); border: 1px solid var(--border); padding: 40px; border-radius: 16px; margin: 40px 0; text-align: center; }
+        .guarantee h3 { color: var(--green); margin-top: 0; }
+        
+        .faq-item { background: var(--card); border: 1px solid var(--border); padding: 25px; margin: 15px 0; border-radius: 16px; }
+        .faq-item h4 { margin-bottom: 12px; color: var(--cyan); font-size: 1.1rem; }
+        .faq-item p { margin: 0; }
+        
+        footer { background: rgba(17, 24, 39, 0.5); border-top: 1px solid var(--border); text-align: center; padding: 50px 20px; margin-top: 50px; }
+        footer p { margin: 8px 0; color: var(--muted); font-size: 0.9rem; }
+        
+        @media (max-width: 768px) { 
+            section { padding: 50px 20px; } 
+            .hero { padding: 70px 20px 50px; } 
+            .step { flex-direction: column; gap: 15px; } 
+            body { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <p class="eyebrow">Stop Doing Work Computers Should Do</p>
+        <h1>Automate Your Business in <span class="highlight">5 Minutes</span> — No Coding Required</h1>
+        <p class="hero-subtitle">10 copy-paste AI workflow templates that save 10+ hours every week. No learning curve. No tech skills. Just working systems you can use today.</p>
+        
+        <div class="video-placeholder">
+            <p>🎥 VSL Video Will Be Embedded Here</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">(5-minute walkthrough of the templates in action)</p>
+        </div>
+        
+        <a href="#offer" class="cta-button">Get Instant Access — $97</a>
+        <p class="micro-reassurance">✓ 10 ready-to-use templates ✓ 5-minute setup each ✓ Works with Zapier or Make</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>You're Losing 10+ Hours Every Week to Tasks a Computer Could Do</h2>
+        
+        <div class="problem-grid">
+            <div class="problem-card">
+                <h4>😰 Manual Lead Follow-Up</h4>
+                <p>You get an inquiry, promise to respond "soon," then forget. By the time you remember, they've hired someone else.</p>
+            </div>
+            <div class="problem-card">
+                <h4>😰 Calendar Chaos</h4>
+                <p>Endless email back-and-forth just to schedule a 15-minute call. Your calendar looks like a battlefield.</p>
+            </div>
+            <div class="problem-card">
+                <h4>😰 Invoice Anxiety</h4>
+                <p>You finished the work weeks ago but haven't invoiced. Chasing payments feels awkward. Cash flow suffers.</p>
+            </div>
+            <div class="problem-card">
+                <h4>😰 Social Media Stress</h4>
+                <p>You know you should post consistently, but it takes forever. So you post sporadically and get sporadic results.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <p>Here's the truth: You're not bad at business. You're just doing work that should be automated.</p>
+        </div>
+    </div>
+</section>
+
+<section style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+        <h2>What If Every Repetitive Task Just... Handled Itself?</h2>
+        
+        <p>Imagine waking up to:</p>
+        <p>✓ <strong>New leads automatically nurtured</strong> with personalized follow-up sequences</p>
+        <p>✓ <strong>Meetings scheduled without you lifting a finger</strong> — your calendar fills itself</p>
+        <p>✓ <strong>Invoices sent and payments tracked</strong> automatically</p>
+        <p>✓ <strong>Social content posted consistently</strong> across all platforms</p>
+        <p>✓ <strong>Client onboarding completed</strong> before you even say hello</p>
+        
+        <div class="highlight-box">
+            <p>This isn't a fantasy. It's what happens when you have the right automation templates.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>How It Works (Copy, Paste, Done)</h2>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Choose Your Template</h4>
+                    <p>Pick from 10 proven workflows: lead capture, email sequences, calendar booking, invoicing, social posting, client onboarding, and more.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Watch the 3-Minute Setup Video</h4>
+                    <p>Each template includes a short video showing exactly where to copy, what to paste, and which 2-3 details to customize.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Turn It On</h4>
+                    <p>Activate your automation. It runs 24/7. You get hours back every week while the system handles the work.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+        <h2>What's Inside the Complete System</h2>
+        
+        <div class="feature-grid">
+            <div class="card">
+                <h4>🎯 Lead Capture Machine</h4>
+                <p>Instant response to every inquiry with qualification questions. Never lose a lead to slow follow-up again.</p>
+            </div>
+            <div class="card">
+                <h4>📧 Email Nurture Sequence</h4>
+                <p>5-email welcome series that builds trust and moves prospects toward the sale. Fully automated.</p>
+            </div>
+            <div class="card">
+                <h4>📅 Calendar Booking Bot</h4>
+                <p>Eliminates scheduling back-and-forth. Prospects book directly, meetings appear on your calendar.</p>
+            </div>
+            <div class="card">
+                <h4>💰 Invoice Automation</h4>
+                <p>Invoices sent automatically when work completes. Payment reminders handled for you.</p>
+            </div>
+            <div class="card">
+                <h4>📱 Social Content Engine</h4>
+                <p>One piece of content becomes 10+ posts across platforms. Consistent presence, minimal effort.</p>
+            </div>
+            <div class="card">
+                <h4>🚀 Client Onboarding Flow</h4>
+                <p>New clients automatically receive welcome packets, contracts, and next steps. Professional from day one.</p>
+            </div>
+            <div class="card">
+                <h4>⭐ Review Request System</h4>
+                <p>Automatically asks happy clients for reviews at the perfect time. Builds social proof on autopilot.</p>
+            </div>
+            <div class="card">
+                <h4>📊 Weekly Report Generator</h4>
+                <p>Compiles your key metrics into a simple dashboard every Monday morning. Know your numbers.</p>
+            </div>
+            <div class="card">
+                <h4>🔔 Task Reminder System</h4>
+                <p>Never forget follow-ups, deadlines, or important tasks. Smart reminders based on context.</p>
+            </div>
+            <div class="card">
+                <h4>📥 Content Curation Bot</h4>
+                <p>Automatically finds and shares relevant industry content. Positions you as a thought leader.</p>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <p>Plus: Setup videos, customization guides, troubleshooting checklists, and priority support.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Who This Is For</h2>
+        
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">This isn't for everyone. It's specifically designed for:</p>
+        
+        <p>✓ <strong>Solopreneurs</strong> wearing too many hats and drowning in admin work</p>
+        <p>✓ <strong>Small business owners</strong> (1-10 employees) who can't afford a full-time assistant</p>
+        <p>✓ <strong>Service providers</strong> (consultants, coaches, agencies) who sell time and need more of it</p>
+        <p>✓ <strong>Non-technical people</strong> who want automation without learning to code</p>
+        <p>✓ <strong>Action-takers</strong> who value implementation over theory</p>
+        
+        <div class="highlight-box">
+            <p>If you're tired of doing repetitive work that a computer should handle, this is for you.</p>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="offer">
+    <div class="container">
+        <p class="eyebrow">Limited Time Launch Price</p>
+        <h2>Get 10+ Hours Back Every Week</h2>
+        
+        <div class="price">$97</div>
+        <p class="price-note">Complete System — All 10 Templates + Bonuses</p>
+        
+        <ul class="price-features">
+            <li>10 proven automation templates</li>
+            <li>3-minute setup video for each</li>
+            <li>Customization guides</li>
+            <li>Troubleshooting checklists</li>
+            <li>Zapier + Make compatible</li>
+            <li>Works with Gmail, Google Calendar, Stripe, and 5,000+ apps</li>
+            <li>Lifetime access + updates</li>
+            <li>30-day money-back guarantee</li>
+        </ul>
+        
+        <a href="#" class="cta-button" style="font-size: 1.3rem; padding: 22px 56px;">Get Instant Access — $97</a>
+        <p class="micro-reassurance">One-time payment. No subscription. Instant delivery.</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="guarantee">
+            <h3>30-Day "It Actually Works" Guarantee</h3>
+            <p>Try the templates for 30 days. Set them up. Use them in your business. If you don't save at least 5 hours in your first month, I'll refund every penny. No questions, no hassle, no hard feelings.</p>
+            <p style="margin-top: 20px; font-weight: 600;">The risk is entirely on me. You have nothing to lose and 10+ hours per week to gain.</p>
+        </div>
+    </div>
+</section>
+
+<section style="background: rgba(30, 41, 59, 0.3);">
+    <div class="container">
+        <h2>Common Questions</h2>
+        
+        <div class="faq-item">
+            <h4>Do I need to know how to code?</h4>
+            <p>Absolutely not. These are copy-paste templates. If you can copy and paste, you can use them. The setup videos show you exactly what to do.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>What tools do I need?</h4>
+            <p>You'll need either Zapier or Make (both have free tiers). The templates work with Gmail, Google Calendar, and 5,000+ other apps you probably already use.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>How long does each template take to set up?</h4>
+            <p>Most take 3-5 minutes. The longest might take 10 minutes if you're customizing extensively. Watch the video, copy the template, customize 2-3 details, done.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>What if I get stuck?</h4>
+            <p>Every template includes a troubleshooting checklist. Plus you'll have access to priority support if you need help.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Is this a subscription?</h4>
+            <p>No. One-time payment of $97. You get lifetime access to all 10 templates plus any future updates.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h4>Can I use these for my clients?</h4>
+            <p>These templates are for your own business use. If you want to use them for clients, check out our Agency Partner Program (details inside).</p>
+        </div>
+    </div>
+</section>
+
+<section style="text-align: center; padding: 80px 20px;">
+    <div class="container">
+        <h2>One Week From Now...</h2>
+        <p style="font-size: 1.3rem; color: white; font-weight: 600; margin: 25px 0;">You could still be drowning in repetitive tasks, working nights and weekends just to keep up.</p>
+        <p style="color: var(--muted);">Or you could have 10 automated systems running 24/7, giving you back 10+ hours every week to focus on what actually grows your business.</p>
+        <p style="margin-top: 40px;">
+            <a href="#offer" class="cta-button" style="font-size: 1.3rem; padding: 22px 56px;">Get Instant Access — $97</a>
+        </p>
+        <p style="margin-top: 30px; font-style: italic; color: var(--text-dim);">The choice is yours. But you already know which one leads to a better business and life.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 AI Workflow Templates. All rights reserved.</p>
+        <p>Built for business owners who value their time.</p>
+    </div>
+</footer>
+
+</body>
+</html>

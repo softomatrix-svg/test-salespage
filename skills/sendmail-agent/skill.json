@@ -1,0 +1,19 @@
+{
+  "name": "sendmail-agent",
+  "version": "1.0",
+  "description": "Send email to ie@agentmail.to",
+  "entry": "handler.js",
+  "permissions": ["network"],
+  "inputs": [
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "required": true
+    }
+  ]
+}

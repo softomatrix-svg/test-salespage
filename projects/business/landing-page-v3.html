@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Mastery for Marketers - Get Better Emails, Ads & Content in Half the Time</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Georgia, 'Palatino Linotype', serif;
+            line-height: 1.65;
+            color: #2d3748;
+            background: #fafafa;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a0f1e 0%, #1a1a2e 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero .pre-headline {
+            color: #f59e0b;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+        
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero .offer-clarity {
+            font-size: 18px;
+            color: #a0aec0;
+            margin-bottom: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .social-proof {
+            font-size: 15px;
+            color: #10b981;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #16a34a;
+            color: #fff;
+            padding: 18px 48px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: #15803d;
+        }
+        
+        .micro-reassurance {
+            color: #718096;
+            font-size: 15px;
+            margin-top: 16px;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-light {
+            background: #f7fafc;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-top: 36px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        
+        p {
+            margin-bottom: 16px;
+            line-height: 1.65;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+        
+        ul {
+            margin: 24px 0 24px 40px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.65;
+        }
+        
+        /* Before/After Examples */
+        .example-box {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        
+        .example-box h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #0a0f1e;
+        }
+        
+        .bad-example {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 16px;
+            margin-bottom: 16px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .good-example {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 16px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .result {
+            background: #f8fafc;
+            padding: 16px;
+            margin-top: 12px;
+            font-size: 15px;
+            border-radius: 8px;
+        }
+        
+        /* Callouts */
+        .callout {
+            background: #f7fafc;
+            border-left: 4px solid #16a34a;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .callout p {
+            margin-bottom: 12px;
+        }
+        
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .guarantee-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 40px;
+            margin: 48px 0;
+            text-align: center;
+        }
+        
+        .guarantee-box h2 {
+            margin-top: 0;
+        }
+        
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .pricing-table th {
+            background: #0a0f1e;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .pricing-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pricing-table .price-cell {
+            font-size: 24px;
+            font-weight: 700;
+            color: #16a34a;
+        }
+        
+        .pricing-table .featured {
+            background: #f0fdf4;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            margin: 48px 0;
+        }
+        
+        .urgency-box {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 12px;
+        }
+        
+        .urgency-box p {
+            margin: 0;
+            color: #991b1b;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 56px;
+            font-weight: 900;
+            color: #16a34a;
+            margin: 20px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 24px;
+        }
+        
+        .subtext {
+            color: #6b7280;
+            font-size: 15px;
+            margin-top: 16px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 48px 0;
+            border-top: 1px solid #ddd;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        
+        .footer p {
+            margin-bottom: 12px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 48px 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .pricing-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <p class="pre-headline">Used by 500+ Marketers to Cut Content Time by 70%</p>
+            <h1>Turn AI Into Your Marketing Copy Assistant — Get Better Emails, Ads & Content in Half the Time</h1>
+            <p class="offer-clarity">A 5-module course + 150 proven prompts + cheat sheets that transform generic AI output into high-converting marketing copy</p>
+            <p class="social-proof">⭐⭐⭐⭐⭐ 4.9/5 from 500+ marketers • 30-day guarantee</p>
+            <a href="#offer" class="cta-button">Start Writing Better AI Prompts Today →</a>
+            <p class="micro-reassurance">Instant access • Works with ChatGPT, Claude & Gemini</p>
+        </div>
+    </section>
+
+    <!-- Before/After Examples -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>See the Difference Better Prompting Makes</h2>
+            <p>Most marketers get mediocre results because they prompt like this:</p>
+            
+            <div class="example-box">
+                <h4>❌ BAD PROMPT (What Most People Write)</h4>
+                <div class="bad-example">
+                    "Write an email about our new product"
+                </div>
+                <div class="result">
+                    <strong>Result:</strong> Generic, boring email that sounds like every other marketing message. You spend 30 minutes rewriting it.
+                </div>
+            </div>
+            
+            <p>Here's what happens when you use the Role-Context-Task Framework:</p>
+            
+            <div class="example-box">
+                <h4>✅ BETTER PROMPT (Using Our Framework)</h4>
+                <div class="good-example">
+                    "You are a conversion copywriter with 10 years of experience writing emails for SaaS companies. Write a launch email for a project management tool aimed at marketing agencies struggling with client communication. The tone should be professional but conversational. Include: 1) A compelling subject line, 2) A story about a specific pain point, 3) How the tool solves it, 4) Social proof, 5) A clear CTA. Keep it under 200 words."
+                </div>
+                <div class="result">
+                    <strong>Result:</strong> Specific, engaging email that matches your brand voice. Ready to send with minor tweaks. Saved 25 minutes.
+                </div>
+            </div>
+            
+            <p><strong>This is the difference systematic prompting makes.</strong> Not tricks. Not hacks. Just structured frameworks that get AI to deliver exactly what you need.</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>You're Wasting Hours on AI Tools That Don't Deliver</h2>
+            
+            <p>You sit down with an ambitious content calendar and a tight deadline.</p>
+            
+            <p>Your task: write five email sequences, ten social posts, and a sales page—all before lunch.</p>
+            
+            <p>You open ChatGPT with confidence. You've used it dozens of times. How hard can this be?</p>
+            
+            <p>Three hours later, you're still wrestling with the first email.</p>
+            
+            <p>The output is flat. Bland. It sounds like every other AI-generated piece of content on the internet.</p>
+            
+            <p>You try again. You tweak. You adjust.</p>
+            
+            <p>By hour four, you've produced one mediocre paragraph that you'll probably rewrite from scratch.</p>
+            
+            <p><strong>Here's what nobody tells you:</strong> The tool isn't the advantage. The prompting is.</p>
+            
+            <p>ChatGPT, Claude, Gemini—these are commodities. Every marketer has access to the same models.</p>
+            
+            <p>But there's a massive gap between marketers who get mediocre output and those who get exactly what they need, consistently.</p>
+            
+            <p><strong>That gap is systematic prompt engineering.</strong></p>
+        </div>
+    </section>
+
+    <!-- Cost Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>The Real Cost of Bad Prompting</h2>
+            
+            <p>Let's be direct about what inefficient AI use is costing you:</p>
+            
+            <p><strong>Time you'll never recover.</strong> Every hour spent wrestling with AI output is an hour not spent on strategy, creativity, or growth. At 10 hours per week, that's 520 hours per year—13 full work weeks.</p>
+            
+            <p><strong>Missed opportunities.</strong> While you struggle with basic content, competitors who've mastered prompting are launching campaigns, testing offers, and capturing market share.</p>
+            
+            <p><strong>Quality that blends in.</strong> Mediocre AI output doesn't build brands. It doesn't create connection. It just adds to the noise.</p>
+            
+            <p><strong>Career vulnerability.</strong> AI isn't replacing marketers. But marketers who can't use AI effectively? They're becoming replaceable. The skill gap is widening.</p>
+            
+            <p>The marketers who thrive won't be the ones who "use AI." They'll be the ones who've mastered the systematic approach to getting exceptional results.</p>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>The Systematic Approach That Changes Everything</h2>
+            
+            <p>What if you could stop hoping for good AI output and start architecting it?</p>
+            
+            <p>What if you had a complete system for:</p>
+            
+            <ul>
+                <li>Writing prompts that produce high-quality output on the first try</li>
+                <li>Knowing exactly which approach to use for every marketing task</li>
+                <li>Getting AI to match your brand voice consistently</li>
+                <li>Creating weeks of content in hours without sacrificing quality</li>
+            </ul>
+            
+            <p>This isn't about tricks or hacks. It's about understanding the principles that make AI respond effectively—and having a complete library of proven prompts.</p>
+            
+            <p><strong>This is AI Prompt Mastery for Marketers.</strong></p>
+        </div>
+    </section>
+
+    <!-- Mechanism Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>6 Frameworks. Consistent Results.</h2>
+            
+            <p>After testing hundreds of prompts across every marketing discipline, I identified six core approaches that produce reliable, high-quality results:</p>
+            
+            <div class="callout">
+                <p style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">The Complete Framework System</p>
+                
+                <p><strong>1. Role-Context-Task Architecture</strong><br>
+                Gets AI to adopt the right perspective before generating. Creates complete context that guides the model's thinking.</p>
+                
+                <p><strong>2. Strategic Constraint Method</strong><br>
+                Uses carefully chosen limitations to force creativity and uniqueness. Paradoxically, constraints increase quality.</p>
+                
+                <p><strong>3. Chain-of-Thought Sequencing</strong><br>
+                Breaks complex tasks into logical steps. AI executes each step flawlessly, building toward cohesive results.</p>
+                
+                <p><strong>4. Output Template Specification</strong><br>
+                Ensures AI produces exactly the format you need—specific structures for emails, posts, pages, and ads.</p>
+                
+                <p><strong>5. Iterative Refinement Protocol</strong><br>
+                Systematic approach to turning good output into great output through targeted follow-up prompts.</p>
+                
+                <p><strong>6. Multi-Persona Perspective Engine</strong><br>
+                Generates diverse viewpoints from a single prompt, giving you options and depth.</p>
+            </div>
+            
+            <p>These aren't theoretical concepts. They're operational approaches you apply immediately, with specific prompt structures you can copy, paste, and customize.</p>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Everything You Need to Master AI Prompting</h2>
+            
+            <h3>5-Module Video Course (2.5 Hours)</h3>
+            
+            <p><strong>Module 1:</strong> Foundations — How AI processes instructions and why most prompts fail</p>
+            <p><strong>Module 2:</strong> The 6 Frameworks — Detailed breakdown with decision trees for when to use each</p>
+            <p><strong>Module 3:</strong> Marketing Applications — Emails, social, copywriting, content strategy, SEO, ads</p>
+            <p><strong>Module 4:</strong> Advanced Techniques — Combining frameworks, troubleshooting, staying current</p>
+            <p><strong>Module 5:</strong> Implementation — Building workflows, measuring improvement, proving ROI</p>
+            
+            <h3>150+ Proven Marketing Prompts</h3>
+            
+            <ul>
+                <li>25 Email marketing prompts (sequences, subject lines, CTAs)</li>
+                <li>25 Social media prompts (posts, threads, engagement)</li>
+                <li>25 Copywriting prompts (headlines, hooks, offers)</li>
+                <li>25 Content strategy prompts (blogs, lead magnets, calendars)</li>
+                <li>25 SEO prompts (keywords, optimization, meta content)</li>
+                <li>25 Advertising prompts (creative concepts, campaigns)</li>
+            </ul>
+            
+            <p>Each prompt includes exact text, when to use it, expected output, and customization tips.</p>
+            
+            <h3>Quick-Reference Resources</h3>
+            
+            <ul>
+                <li>6 Frameworks at a Glance (1-page visual guide)</li>
+                <li>50 High-Impact Prompts (most versatile in the library)</li>
+                <li>Troubleshooting Guide (what to do when output isn't right)</li>
+            </ul>
+            
+            <h3>Private Community + Monthly Updates</h3>
+            
+            <ul>
+                <li>Discord server for course members</li>
+                <li>Monthly live Q&A calls (recorded)</li>
+                <li>New prompts added monthly based on AI capabilities and trends</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="section section-white">
+        <div class="container">
+            <h2>Real Results from Real Marketers</h2>
+            
+            <p><strong>Sarah K., Content Director:</strong> "I was spending 6 hours on content that now takes 90 minutes. The frameworks are game-changing."</p>
+            
+            <p><strong>Mike R., Agency Owner:</strong> "My team went from struggling with AI to producing client-ready copy in one session. Worth 10x the price."</p>
+            
+            <p><strong>Jennifer L., Freelance Copywriter:</strong> "I doubled my client capacity without working more hours. These prompts are my secret weapon."</p>
+            
+            <p><strong>David T., Marketing Manager:</strong> "Our email open rates increased 40% after using the email frameworks. The difference is night and day."</p>
+            
+            <p><em>Results vary based on application and effort. These are representative examples from our community of 500+ marketers.</em></p>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="section section-light">
+        <div class="container">
+            <h2>Built For Marketers Who Want Better Results</h2>
+            
+            <p><strong>This is for you if:</strong></p>
+            
+            <ul>
+                <li>You know AI is important but struggle to get consistent, quality output</li>
+                <li>You're spending too much time on production and not enough on strategy</li>
+                <li>You want to increase output without sacrificing quality</li>
+                <li>You need every competitive advantage you can get</li>
+            </ul>
+            
+            <p><strong>This is NOT for you if:</strong></p>
+            
+            <ul>
+                <li>You expect AI to do 100% of the work with zero input</li>
+                <li>You're looking for "get rich quick" schemes</li>
+                <li>You won't invest time learning the frameworks</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="section section-white" id="offer">
+        <div class="container">
+            <h2>Choose Your Package</h2>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Price</th>
+                        <th>What's Included</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Standard</strong></td>
+                        <td class="price-cell">$197</td>
+                        <td>5-module course, 150+ prompts, cheat sheets, community</td>
+                        <td>Individual marketers</td>
+                    </tr>
+                    <tr class="featured">
+                        <td><strong>Pro ⭐</strong></td>
+                        <td class="price-cell">$297</td>
+                        <td>Everything in Standard + monthly prompt updates, advanced frameworks, case studies, priority support</td>
+                        <td>Power users & teams</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agency</strong></td>
+                        <td class="price-cell">$497</td>
+                        <td>Everything in Pro + team license (5 users), white-label rights, strategy call</td>
+                        <td>Agencies & teams</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="urgency-box">
+                <p>⚡ LAUNCH SPECIAL: Pro package is $297 (regular $497) for the next 48 hours only</p>
+            </div>
+            
+            <div class="cta-section">
+                <p class="old-price">$497</p>
+                <p class="price">$297</p>
+                <p class="subtext">One-time payment. Lifetime access. No subscription.</p>
+                <a href="#" class="cta-button" onclick="alert('Stripe checkout coming soon')">Get AI Prompt Mastery →</a>
+                <p class="subtext">Instant access • 30-day guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>30-Day "Better Prompts or Your Money Back" Guarantee</h2>
+                <p>Follow the course. Use the prompts. Apply the frameworks.</p>
+                <p>If you don't see measurable improvement in your AI output quality, I'll refund every penny.</p>
+                <p><strong>No questions. No hassle. No risk.</strong></p>
+                <p>You either master AI prompting, or you pay nothing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-white">
+        <div class="container" style="text-align: center;">
+            <h2>Every Day You Wait Is Another Day of Missed Opportunities</h2>
+            <p>While you struggle with basic AI output, your competitors are mastering these skills and pulling ahead.</p>
+            <p>Join 500+ marketers who've transformed their AI results.</p>
+            <a href="#offer" class="cta-button" style="margin-top: 32px;">Start Writing Better AI Prompts Today →</a>
+            <p class="subtext" style="margin-top: 24px;">30-Day Money-Back Guarantee</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Prompt Mastery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

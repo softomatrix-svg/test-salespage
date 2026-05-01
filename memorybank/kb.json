@@ -1,0 +1,28 @@
+{
+  "banks": {
+    "Workshops": [
+      {
+        "id": "workshop1",
+        "source": "workshop1---575b3802-df77-45ea-862d-fba49f19ced8.pdf",
+        "summary": "OpenClaw is an AI automation platform that goes beyond traditional chat AI to become an AI operator that executes tasks, builds systems, and performs actions across connected software. It works in a controlled environment with a skills-based architecture and multiple models (ChatGPT, Kimi 2.5, Claude Sonnet). The ecosystem includes Claw Launcher, Skills Repository, Agency Launcher, Control Center, PostStream, TitanLayer, and Business Builder. The intensive outlines how to set up API keys, deploy the portal, install skills, and use a troubleshooting hierarchy, with a 3-phase rollout and daily onboarding calls.",
+        "actions": [
+          "Get and configure your Claude (Anthropic) API key.",
+          "Deploy your OpenClaw portal via Claw Launcher.",
+          "Complete the onboarding checklist: audio, profile, agent email, Telegram, Titanium, Moonshot API.",
+          "Install and experiment with a few core skills from the Skills Repository.",
+          "Learn and use the troubleshooting hierarchy: reload, restart, reset, delete.",
+          "Join daily onboarding calls to stay aligned with the 3-phase rollout.",
+          "Set up bonus tools like PostStream and TitanLayer once basics are stable.",
+          "Use support resources (nicelysupport.com, support email) when blocked.",
+          "Plan how to apply OpenClaw’s automation to your own workflows.",
+          "Track progress against the 3-phase (7-day) buildout timeline."
+        ],
+        "tags": {
+          "topics": ["AI automation", "agentic AI", "business automation", "skills-based architecture", "SaaS tools"],
+          "concepts": ["AI operator vs assistant", "controlled environment", "API-cost-plus-skills", "slash commands", "multi-model AI"],
+          "audience": ["entrepreneurs", "agency owners", "marketers", "solopreneurs"]
+        }
+      }
+    ]
+  }
+}

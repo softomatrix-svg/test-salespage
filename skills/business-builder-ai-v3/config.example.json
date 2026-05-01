@@ -1,0 +1,15 @@
+{
+  "skill_name": "business-builder-ai",
+  "mode": "guided",
+  "stripe": {
+    "enabled": false,
+    "use_test_mode_first": true,
+    "api_key_env_var": "STRIPE_API_KEY"
+  },
+  "approval_checkpoints": {
+    "before_stripe_action": true,
+    "before_publish": true,
+    "before_email_send": true,
+    "before_ads": true
+  }
+}

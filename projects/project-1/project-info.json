@@ -1,0 +1,23 @@
+{
+  "projectName": "project-1",
+  "cleanedName": "project-1",
+  "github": {
+    "owner": "softomatrix-svg",
+    "repo": "project-1",
+    "fullName": "softomatrix-svg/project-1",
+    "visibility": "public",
+    "isOrganization": false,
+    "isNew": true,
+    "url": "https://github.com/softomatrix-svg/project-1"
+  },
+  "vercel": {
+    "projectId": "prj_syenILBVUBvTHdOQ6toVMoJReBea",
+    "projectName": "project-1",
+    "scope": "softomatrix-9324",
+    "scopeId": "team_P0dOPYPpolzDOIz4YGlrLTHx",
+    "isNew": true,
+    "url": "https://vercel.com/softomatrix-9324s-projects/project-1"
+  },
+  "linkedAt": "2026-04-17",
+  "status": "ready"
+}

@@ -6,85 +6,406 @@
     <title>Local SEO Domination Playbook - Rank #1 on Google Maps</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a1628; color: #ffffff; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        body { font-family: 'Georgia', serif; color: #1a1a1a; background: #fff; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         
         /* Hero Section */
-        .hero { background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%); padding: 80px 0 60px; text-align: center; }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero h1 .highlight { color: #f4b942; }
-        .subheadline { font-size: 1.25rem; color: #8ba3c7; max-width: 700px; margin: 0 auto 40px; }
-        .eyebrow { color: #f4b942; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .hero { 
+            background: #15152b; 
+            padding: 80px 20px 60px; 
+            text-align: center; 
+            color: #ffffff;
+            border-bottom: 4px solid #dfb83f;
+        }
+        .hero .eyebrow { 
+            font-family: Arial, sans-serif; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: #ccc; 
+            margin-bottom: 20px; 
+        }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            font-weight: 700; 
+            line-height: 1.15; 
+            margin-bottom: 28px; 
+            max-width: 800px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .hero h1 span { color: #f0c040; }
+        .hero .subheadline { 
+            font-family: Arial, sans-serif; 
+            font-size: 1.35rem; 
+            color: #ccc; 
+            max-width: 700px; 
+            margin: 0 auto 30px; 
+            line-height: 1.6;
+        }
+        .cta-button { 
+            display: inline-block; 
+            background: #f0c040; 
+            color: #1a1a1a; 
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            padding: 18px 40px; 
+            border-radius: 4px; 
+            text-decoration: none; 
+            margin-top: 20px; 
+            transition: all 0.3s ease; 
+        }
+        .cta-button:hover { background: #d4a017; transform: translateY(-2px); }
+        .hero .risk { 
+            font-family: Arial, sans-serif; 
+            font-size: 13px; 
+            color: #888; 
+            margin-top: 16px; 
+        }
         
         /* Video Section */
-        .video-section { background: #0a1628; padding: 40px 0; }
-        .video-container { max-width: 800px; margin: 0 auto; background: #000; border-radius: 12px; overflow: hidden; border: 2px solid #1a3a6a; }
+        .video-section { background: #f5f5f5; padding: 80px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .video-container { 
+            max-width: 800px; 
+            width: 100%;
+            margin: 0 auto; 
+            background: #000; 
+            border-radius: 12px; 
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(244, 185, 66, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s; }
-        .play-button:hover { transform: translate(-50%, -50%) scale(1.1); }
-        .play-button::after { content: ''; width: 0; height: 0; border-left: 25px solid #0a1628; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 8px; }
+        .play-button { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            width: 80px; 
+            height: 80px; 
+            background: rgba(240, 192, 64, 0.9); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer;
+        }
+        .play-button::after { 
+            content: ''; 
+            width: 0; 
+            height: 0; 
+            border-left: 25px solid #1a1a1a; 
+            border-top: 15px solid transparent; 
+            border-bottom: 15px solid transparent; 
+            margin-left: 8px; 
+        }
         
-        /* CTA Button */
-        .cta-button { display: inline-block; background: linear-gradient(135deg, #f4b942 0%, #d4a017 100%); color: #0a1628; font-size: 1.25rem; font-weight: 700; padding: 20px 48px; border-radius: 8px; text-decoration: none; margin-top: 30px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(244, 185, 66, 0.3); }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(244, 185, 66, 0.4); }
+        /* Section Styling */
+        .section { padding: 60px 20px; }
+        .section h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 28px; 
+            text-align: center; 
+            line-height: 1.2;
+        }
+        .section p { 
+            font-family: Arial, sans-serif; 
+            font-size: 19px; 
+            line-height: 1.8; 
+            color: #333; 
+            margin-bottom: 20px; 
+        }
+        .accent { color: #c8960c; }
         
         /* Problem Section */
-        .problem { padding: 80px 0; background: #0a1628; }
-        .problem h2 { font-size: 2.5rem; text-align: center; margin-bottom: 20px; }
-        .problem h2 .highlight { color: #f4b942; }
-        .problem-intro { text-align: center; color: #8ba3c7; font-size: 1.1rem; max-width: 700px; margin: 0 auto 50px; }
-        .highlight-box { background: rgba(244, 185, 66, 0.1); border-left: 4px solid #f4b942; padding: 24px; margin: 30px auto; max-width: 800px; border-radius: 0 8px 8px 0; }
-        .highlight-box p { color: #f4b942; font-size: 1.1rem; font-weight: 500; }
+        .problem { background: #ffffff; }
+        .problem h2 { text-align: center; }
+        .problem-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+            max-width: 900px; 
+            margin: 40px auto 0; 
+        }
+        .problem-card { 
+            background: #fff; 
+            border-radius: 8px; 
+            padding: 28px; 
+            border: 1px solid #eee;
+        }
+        .problem-card h3 { 
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; 
+            margin-bottom: 12px; 
+            color: #1a1a3e; 
+            font-weight: 700;
+        }
+        .problem-card p { 
+            font-family: Arial, sans-serif; 
+            font-size: 17px; 
+            color: #555; 
+            line-height: 1.7; 
+            margin: 0;
+        }
         
-        /* Solution Section */
-        .solution { padding: 80px 0; background: linear-gradient(135deg, #f4b942 0%, #d4a017 100%); color: #0a1628; text-align: center; }
-        .solution h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .solution p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
-        .solution .cta-button { background: #0a1628; color: #f4b942; margin-top: 20px; }
+        /* Intro Section */
+        .intro { background: #fffbee; text-align: center; }
+        .intro h2 { color: #1a1a3e; }
+        .intro h2 span { color: #c8960c; }
         
-        /* What's Included Section */
-        .included { padding: 80px 0; background: #0a1628; }
-        .included h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
-        .included h2 .highlight { color: #f4b942; }
-        .components-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
-        .component-card { background: linear-gradient(135deg, #1a2a4a 0%, #0f1d35 100%); border: 1px solid #1a3a6a; border-radius: 12px; padding: 30px; display: flex; gap: 20px; align-items: flex-start; transition: all 0.3s ease; }
-        .component-card:hover { border-color: #f4b942; transform: translateY(-5px); }
-        .component-number { width: 50px; height: 50px; background: linear-gradient(135deg, #f4b942 0%, #d4a017 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; color: #0a1628; flex-shrink: 0; }
-        .component-content h3 { font-size: 1.2rem; margin-bottom: 8px; color: #f4b942; }
-        .component-content p { color: #8ba3c7; font-size: 0.95rem; line-height: 1.6; }
+        /* Components Grid */
+        .components { background: #fff; }
+        .components h2 { text-align: center; margin-bottom: 40px; }
+        .components h2 span { color: #c8960c; }
+        .components-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        .component-card { 
+            background: #f9f9f9; 
+            border-radius: 8px; 
+            padding: 28px; 
+            display: flex; 
+            gap: 16px; 
+            align-items: flex-start;
+            border: 1px solid #eee;
+        }
+        .component-icon { 
+            font-size: 2rem; 
+            flex-shrink: 0; 
+        }
+        .component-content h3 { 
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; 
+            margin-bottom: 8px; 
+            color: #1a1a3e; 
+            font-weight: 700;
+        }
+        .component-content p { 
+            font-family: Arial, sans-serif; 
+            font-size: 17px; 
+            color: #555; 
+            line-height: 1.7; 
+            margin: 0;
+        }
+        
+        /* Timeline Section */
+        .timeline { background: #f5f5f5; }
+        .timeline h2 { text-align: center; margin-bottom: 40px; }
+        .timeline h2 span { color: #c8960c; }
+        .timeline-container { max-width: 700px; margin: 0 auto; }
+        .timeline-item { 
+            display: flex; 
+            gap: 20px; 
+            margin-bottom: 32px; 
+            padding-bottom: 32px;
+            border-bottom: 1px solid #ddd;
+        }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-number { 
+            width: 50px; 
+            height: 50px; 
+            background: linear-gradient(135deg, #1a1a3e 0%, #0f0f1a 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: 700; 
+            font-size: 1.25rem; 
+            color: #f0c040; 
+            flex-shrink: 0; 
+        }
+        .timeline-content h3 { 
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; 
+            margin-bottom: 8px; 
+            color: #1a1a3e; 
+            font-weight: 700;
+        }
+        .timeline-content p { 
+            font-family: Arial, sans-serif; 
+            font-size: 17px; 
+            color: #555; 
+            line-height: 1.7; 
+            margin: 0;
+        }
         
         /* Pricing Section */
-        .pricing { padding: 80px 0; background: linear-gradient(135deg, #0f1d35 0%, #0a1628 100%); }
-        .pricing h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
-        .pricing-card { background: linear-gradient(135deg, #1a2a4a 0%, #0f1d35 100%); border: 2px solid #f4b942; border-radius: 16px; padding: 40px; text-align: center; max-width: 500px; margin: 0 auto; position: relative; }
-        .pricing-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
-        .pricing-card .price { font-size: 4rem; font-weight: 800; color: #f4b942; margin: 20px 0; }
-        .pricing-card .price span { font-size: 1rem; color: #8ba3c7; }
-        .pricing-card ul { list-style: none; text-align: left; margin: 30px 0; }
-        .pricing-card ul li { padding: 12px 0; color: #c5d1e8; padding-left: 30px; position: relative; border-bottom: 1px solid #1a3a6a; }
-        .pricing-card ul li::before { content: '✓'; position: absolute; left: 0; color: #f4b942; font-weight: 700; }
-        .pricing-card .cta-button { width: 100%; margin-top: 20px; }
+        .pricing { background: #fff; padding: 60px 20px; }
+        .pricing h2 { text-align: center; margin-bottom: 40px; }
+        .pricing h2 span { color: #c8960c; }
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+        .pricing-card { 
+            background: #f9f9f9; 
+            border-radius: 12px; 
+            padding: 36px 28px; 
+            text-align: center; 
+            border: 2px solid #eee;
+            position: relative;
+        }
+        .pricing-card.featured { 
+            border: 2px solid #f0c040; 
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #1a1a3e 0%, #0f0f1a 100%);
+            color: white;
+        }
+        .pricing-card.featured h3,
+        .pricing-card.featured .price,
+        .pricing-card.featured ul li { color: white; }
+        .pricing-card.featured::before { 
+            content: 'MOST POPULAR'; 
+            position: absolute; 
+            top: -12px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background: #f0c040; 
+            color: #1a1a1a; 
+            font-family: Arial, sans-serif;
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            padding: 6px 16px; 
+            border-radius: 20px; 
+        }
+        .pricing-card h3 { 
+            font-size: 1.3rem; 
+            margin-bottom: 16px; 
+            color: #1a1a3e;
+        }
+        .pricing-card .price { 
+            font-size: 3rem; 
+            font-weight: 700; 
+            color: #f0c040; 
+            margin-bottom: 8px;
+        }
+        .pricing-card .price span { 
+            font-size: 1rem; 
+            color: #888; 
+            font-weight: 400;
+        }
+        .pricing-card ul { 
+            list-style: none; 
+            text-align: left; 
+            margin: 24px 0; 
+            font-family: Arial, sans-serif;
+        }
+        .pricing-card ul li { 
+            padding: 10px 0; 
+            color: #555; 
+            padding-left: 28px; 
+            position: relative; 
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .pricing-card ul li::before { 
+            content: '✓'; 
+            position: absolute; 
+            left: 0; 
+            color: #22c55e; 
+            font-weight: 700; 
+        }
+        .pricing-card.featured ul li::before { color: #f0c040; }
+        .pricing-card.featured ul li { border-bottom-color: #333; color: #ccc; }
+        .pricing-card .cta-button { 
+            width: 100%; 
+            margin-top: 20px; 
+            padding: 16px; 
+            font-size: 1rem; 
+        }
         
         /* Guarantee Section */
-        .guarantee { padding: 80px 0; background: #0a1628; text-align: center; }
-        .guarantee-badge { width: 100px; height: 100px; background: linear-gradient(135deg, #f4b942 0%, #d4a017 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; font-size: 2.5rem; font-weight: 800; color: #0a1628; }
-        .guarantee h2 { font-size: 2rem; margin-bottom: 20px; }
-        .guarantee p { color: #8ba3c7; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .guarantee { 
+            background: linear-gradient(135deg, #1a1a3e, #0f0f1a); 
+            color: white; 
+            text-align: center; 
+            padding: 60px 20px;
+        }
+        .guarantee h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 20px; 
+            color: #f0c040; 
+        }
+        .guarantee p { 
+            font-family: Arial, sans-serif; 
+            font-size: 19px; 
+            color: #ccc; 
+            line-height: 1.8; 
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* FAQ Section */
+        .faq { background: #fff; }
+        .faq h2 { text-align: center; margin-bottom: 40px; }
+        .faq h2 span { color: #c8960c; }
+        .faq-container { max-width: 700px; margin: 0 auto; }
+        .faq-item { 
+            margin-bottom: 24px; 
+            padding-bottom: 24px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { 
+            font-family: Arial, sans-serif;
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            color: #1a1a3e; 
+            margin-bottom: 12px; 
+        }
+        .faq-a { 
+            font-family: Arial, sans-serif; 
+            font-size: 18px; 
+            color: #555; 
+            line-height: 1.8; 
+        }
         
         /* Final CTA */
-        .final-cta { padding: 100px 0; background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%); text-align: center; }
-        .final-cta h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .final-cta h2 .highlight { color: #f4b942; }
-        .final-cta p { color: #8ba3c7; font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; }
+        .final-cta { 
+            background: #f9f9f9; 
+            padding: 80px 20px; 
+            text-align: center; 
+        }
+        .final-cta h2 { margin-bottom: 24px; font-size: 2.5rem; }
+        .final-cta h2 span { color: #c8960c; }
+        .final-cta p { 
+            font-family: Arial, sans-serif; 
+            font-size: 19px; 
+            color: #555; 
+            max-width: 650px; 
+            margin: 0 auto 30px; 
+            line-height: 1.8; 
+        }
+        
+        /* Divider */
+        .divider { height: 4px; background: linear-gradient(90deg, #f0c040, #c8960c); }
         
         /* Footer */
-        footer { padding: 40px 0; background: #0a1628; text-align: center; color: #5a7a9a; border-top: 1px solid #1a3a6a; }
+        footer { 
+            background: #1a1a1a; 
+            color: #888; 
+            text-align: center; 
+            padding: 30px 20px; 
+            font-family: Arial, sans-serif; 
+            font-size: 13px; 
+        }
         
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
-            .components-grid { grid-template-columns: 1fr; }
-            .pricing-card .price { font-size: 3rem; }
+            .problem-grid,
+            .components-grid,
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: none; }
+            .price-now { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -93,8 +414,10 @@
     <section class="hero">
         <div class="container">
             <div class="eyebrow">Attention Local Business Owners</div>
-            <h1>Stop Trading Time For Money. <span class="highlight">Rank #1 on Google Maps</span> in 30 Days</h1>
+            <h1>How to <span>Rank #1 on Google Maps</span> in 30 Days Without Hiring an Expensive Agency</h1>
             <p class="subheadline">The complete step-by-step system for plumbers, dentists, contractors, and service businesses who'd rather fix toilets than learn marketing</p>
+            <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
+            <p class="risk">⭐ 30-Day "Rank or Refund" Guarantee &nbsp;|&nbsp; Instant Access &nbsp;|&nbsp; Works Even If You Have Zero Marketing Experience</p>
         </div>
     </section>
 
@@ -106,78 +429,145 @@
                     <div class="play-button"></div>
                 </div>
             </div>
-            <div style="text-align: center;">
-                <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
-            </div>
+            <p style="color: #888; font-family: Arial, sans-serif; font-size: 14px; margin-top: 16px;">▲ Watch this short video before you scroll</p>
         </div>
     </section>
 
     <!-- Problem Section -->
-    <section class="problem">
+    <section class="section problem">
         <div class="container">
-            <h2>You've Been <span class="highlight">Invisible</span> to Customers Who Need You Right Now</h2>
-            <p class="problem-intro">Every day, hundreds of people in your city search for exactly what you offer. But they find your competitors instead.</p>
+            <h2>Are You <span class="accent">Invisible</span> to Customers Who Need You Right Now?</h2>
+            <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">Every day, hundreds of people in your city search for exactly what you offer. But they find your competitors instead.</p>
             
-            <div class="highlight-box">
-                <p>"I was on page 3 of Google for 2 years. After following this playbook for 30 days, I'm #1 on Google Maps and getting 3-4 new calls per day." — Mike R., Plumber in Phoenix</p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>🔍 The "Best [Service] Near Me" Problem</h3>
+                    <p>When someone searches "best plumber near me" or "emergency dentist [your city]" — you're not showing up. Your competitors are stealing those calls.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>💸 The Agency Trap</h3>
+                    <p>Marketing agencies charge $2,000-$5,000/month with 6-month contracts. You pay whether you get results or not. Most small businesses can't afford that gamble.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😵 The DIY Overwhelm</h3>
+                    <p>You've tried learning SEO from YouTube. But every video contradicts the last one. Technical jargon, conflicting advice, and no clear action plan.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>📉 The Slow Death</h3>
+                    <p>Month after month, fewer calls. Fewer leads. Your competitors with worse reviews and higher prices are booking jobs that should be yours.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>⏰ The Time Problem</h3>
+                    <p>You're already working 50+ hours/week. You don't have time to become a marketing expert. You need customers, not another job.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🎲 The Hope Strategy</h3>
+                    <p>Word of mouth used to work. Now? You're hoping the phone rings. Hope is not a business strategy — and it's definitely not paying your bills.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="solution">
+    <!-- Intro Section -->
+    <section class="section intro">
         <div class="container">
-            <h2>Introducing: Local SEO Domination Playbook</h2>
+            <h2>Introducing: <span>Local SEO Domination Playbook</span></h2>
             <p>The only local SEO system designed specifically for business owners who'd rather fix toilets, pull teeth, or build houses than learn marketing.</p>
             <a href="#pricing" class="cta-button">GET INSTANT ACCESS NOW</a>
         </div>
     </section>
 
+    <div class="divider"></div>
+
     <!-- What's Included Section -->
-    <section class="included">
+    <section class="section components">
         <div class="container">
-            <h2>Here's <span class="highlight">Everything You Get</span></h2>
+            <h2>Here's <span>Everything You Get</span></h2>
             <div class="components-grid">
                 <div class="component-card">
-                    <div class="component-number">1</div>
+                    <div class="component-icon">📋</div>
                     <div class="component-content">
-                        <h3>The 30-Day Action Plan</h3>
-                        <p>Complete video course with daily checklists. No guessing. Just follow the steps and watch your rankings climb.</p>
+                        <h3>30-Day Action Plan</h3>
+                        <p>No guessing. No overwhelm. Just follow the daily checklist and watch your rankings climb. Designed for busy business owners with zero marketing experience.</p>
                     </div>
                 </div>
                 <div class="component-card">
-                    <div class="component-number">2</div>
+                    <div class="component-icon">🎯</div>
                     <div class="component-content">
-                        <h3>The Google Business Profile Optimization Guide</h3>
-                        <p>The exact steps to claim, verify, and optimize your GBP. Most businesses do this wrong — you'll do it right.</p>
+                        <h3>Google Maps Optimization</h3>
+                        <p>The exact steps to claim, verify, and optimize your Google Business Profile. Most businesses do this wrong — you'll do it right.</p>
                     </div>
                 </div>
                 <div class="component-card">
-                    <div class="component-number">3</div>
+                    <div class="component-icon">⭐</div>
                     <div class="component-content">
-                        <h3>The Review Generation System</h3>
+                        <h3>Review Generation System</h3>
                         <p>Ethical, automated templates to get more 5-star reviews without begging. Reviews = trust = phone calls = revenue.</p>
                     </div>
                 </div>
                 <div class="component-card">
-                    <div class="component-number">4</div>
+                    <div class="component-icon">🔗</div>
                     <div class="component-content">
-                        <h3>The Citation Building Templates</h3>
+                        <h3>Local Link Building</h3>
+                        <p>Simple ways to get other local websites linking to yours. No outreach required. Just smart positioning in your community.</p>
+                    </div>
+                </div>
+                <div class="component-card">
+                    <div class="component-icon">📍</div>
+                    <div class="component-content">
+                        <h3>Citation Building Templates</h3>
                         <p>Get listed on 50+ directories that Google trusts. Copy-paste templates included. Takes 2 hours, works forever.</p>
                     </div>
                 </div>
                 <div class="component-card">
-                    <div class="component-number">5</div>
+                    <div class="component-icon">📊</div>
                     <div class="component-content">
-                        <h3>The Local Link Building Strategy</h3>
-                        <p>Simple ways to get other local websites linking to yours. No outreach required. Just smart positioning.</p>
+                        <h3>Rank Tracking Dashboard</h3>
+                        <p>Simple spreadsheet to track your progress. Watch yourself move from page 3 to page 1 to position #1.</p>
                     </div>
                 </div>
-                <div class="component-card">
-                    <div class="component-number">6</div>
-                    <div class="component-content">
-                        <h3>The Rank Tracking Dashboard</h3>
-                        <p>Simple spreadsheet to track your progress. Watch yourself move from page 3 to page 1 to position #1.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section timeline">
+        <div class="container">
+            <h2>Your <span>30-Day Roadmap</span> to #1 Rankings</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Days 1-3: Foundation Setup</h3>
+                        <p>Claim and optimize your Google Business Profile. Fix the 7 critical mistakes 90% of businesses make. Set up tracking so you know what's working.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Days 4-10: Citation Blitz</h3>
+                        <p>Get listed on the 50 most important directories. Use our copy-paste templates. This alone often jumps you 10+ positions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Days 11-17: Review Machine</h3>
+                        <p>Deploy our ethical review request system. Turn happy customers into online advocates. Watch your star rating and review count climb.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Days 18-24: Content & Links</h3>
+                        <p>Create simple, effective content that Google loves. Build local links without cold outreach. Position yourself as the local authority.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Days 25-30: Optimize & Scale</h3>
+                        <p>Fine-tune based on results. Double down on what's working. Lock in your #1 position and start capturing competitor traffic.</p>
                     </div>
                 </div>
             </div>
@@ -187,20 +577,51 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2>Choose Your <span style="color: #f4b942;">Domination Package</span></h2>
-            <div class="pricing-card">
-                <h3>Complete Playbook</h3>
-                <div class="price">$297 <span>one-time</span></div>
-                <ul>
-                    <li>Complete video course (6+ hours)</li>
-                    <li>30-day action plan PDF</li>
-                    <li>Google Business Profile optimization guide</li>
-                    <li>Review request templates</li>
-                    <li>Citation building checklist</li>
-                    <li>Rank tracking spreadsheet</li>
-                    <li>Email support (30 days)</li>
-                </ul>
-                <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Instant Access</a>
+            <h2>Choose Your <span>Domination Package</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Core Playbook</h3>
+                    <div class="price">$297 <span>one-time</span></div>
+                    <ul>
+                        <li>Complete video course (6+ hours)</li>
+                        <li>30-day action plan PDF</li>
+                        <li>Google Business Profile optimization guide</li>
+                        <li>Review request templates</li>
+                        <li>Citation building checklist</li>
+                        <li>Rank tracking spreadsheet</li>
+                        <li>Email support (30 days)</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro Package</h3>
+                    <div class="price">$497 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Core Playbook</li>
+                        <li>Done-for-you GMB optimization service</li>
+                        <li>Advanced review generation system</li>
+                        <li>Competitor analysis template</li>
+                        <li>Local link building strategy guide</li>
+                        <li>Monthly content calendar</li>
+                        <li>Priority email support (60 days)</li>
+                        <li>Private community access</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Pro Access</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Done-With-You</h3>
+                    <div class="price">$1,297 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Pro Package</li>
+                        <li>2x 60-min strategy calls</li>
+                        <li>Custom action plan for your business</li>
+                        <li>Personal GMB audit & optimization</li>
+                        <li>Direct access via Slack (30 days)</li>
+                        <li>Monthly check-in calls (3 months)</li>
+                        <li>Guaranteed ranking improvement*</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Apply Now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -208,16 +629,48 @@
     <!-- Guarantee Section -->
     <section class="guarantee">
         <div class="container">
-            <div class="guarantee-badge">30</div>
             <h2>30-Day "Rank or Refund" Guarantee</h2>
             <p>Follow the playbook for 30 days. If you don't see measurable improvement in your Google Maps ranking, I'll refund every penny. No questions, no hassle. You either rank higher or you pay nothing.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="container">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-q">Do I need any technical skills?</div>
+                    <div class="faq-a">Absolutely not. If you can use Google and send emails, you can follow this playbook. I specifically designed it for business owners who hate technology.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How long until I see results?</div>
+                    <div class="faq-a">Most businesses see ranking improvements within 2-3 weeks. By day 30, you should be significantly higher — often on page 1 or in the top 3 map results.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Will this work for my industry?</div>
+                    <div class="faq-a">If you're a local service business (plumber, dentist, contractor, lawyer, realtor, restaurant, etc.), yes. The playbook is industry-agnostic but specifically designed for local service businesses.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What if I don't have a website?</div>
+                    <div class="faq-a">You don't need one to start. Google Business Profile is free and often enough to rank #1. The playbook includes a simple website setup guide if you want one later.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Is there a monthly fee?</div>
+                    <div class="faq-a">No. This is a one-time purchase. You get lifetime access to the course and all future updates. No subscriptions, no hidden fees.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What if my competitors are already doing SEO?</div>
+                    <div class="faq-a">Perfect — that means there's proven demand. Most "SEO-optimized" local businesses are doing it wrong. You'll outrank them by doing the basics better than they do the advanced stuff.</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Stop Being <span class="highlight">Invisible</span>. Start Getting Calls.</h2>
+            <h2>Stop Being <span>Invisible</span>. Start Getting Calls.</h2>
             <p>Every day you wait is another day your competitors book the jobs that should be yours. In 30 days, you could be #1 on Google Maps — or you could still be hoping the phone rings.</p>
             <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
         </div>
