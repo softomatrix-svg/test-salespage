@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Outputs Aren't Bad... Your Prompts Are — Fix That in Minutes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Spacing System */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-tight {
+            padding: 80px 0;
+        }
+        
+        .section-compact {
+            padding: 60px 0;
+        }
+        
+        /* Typography Scale */
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0f172a;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 24px;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: #4b5563;
+        }
+        
+        .text-large {
+            font-size: 22px;
+            line-height: 1.6;
+        }
+        
+        .text-small {
+            font-size: 15px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 64px;
+        }
+        
+        .hero .subheadline {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bullet-list {
+            list-style: none;
+            margin: 32px 0;
+            padding: 0;
+        }
+        
+        .bullet-list li {
+            font-size: 20px;
+            color: #e2e8f0;
+            padding: 8px 0;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .bullet-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-weight: 700;
+        }
+        
+        .trust-line {
+            font-size: 15px;
+            color: #64748b;
+            margin-top: 24px;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+        }
+        
+        /* Problem Section */
+        .problem-section {
+            background: #fef2f2;
+            text-align: center;
+        }
+        
+        .problem-line {
+            font-size: 28px;
+            color: #991b1b;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        
+        .problem-line:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Solution Section */
+        .solution-section {
+            background: #f8fafc;
+            text-align: center;
+        }
+        
+        .solution-section h2 {
+            color: #0f172a;
+        }
+        
+        .solution-section p {
+            font-size: 22px;
+            color: #4b5563;
+        }
+        
+        /* What You Get */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .feature-box {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+        
+        .feature-box h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .feature-box p {
+            font-size: 16px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Proof Section */
+        .proof-section {
+            background: #0f172a;
+            color: white;
+        }
+        
+        .proof-section h2 {
+            color: white;
+            text-align: center;
+        }
+        
+        .before-after {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 32px 0;
+            color: #1f2937;
+        }
+        
+        .before-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .after-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .label-red {
+            color: #dc2626;
+        }
+        
+        .label-green {
+            color: #16a34a;
+        }
+        
+        .prompt-text {
+            font-family: monospace;
+            font-size: 14px;
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+        
+        /* How It Works */
+        .steps-container {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 auto 16px;
+        }
+        
+        .step h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .step p {
+            font-size: 16px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Pricing */
+        .pricing-section {
+            background: #f8fafc;
+            text-align: center;
+        }
+        
+        .price-box {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .price-original {
+            font-size: 24px;
+            color: #9ca3af;
+            text-decoration: line-through;
+        }
+        
+        .price-current {
+            font-size: 72px;
+            font-weight: 800;
+            color: #22c55e;
+            line-height: 1;
+            margin: 16px 0;
+        }
+        
+        .bonuses {
+            text-align: left;
+            margin: 32px 0;
+        }
+        
+        .bonuses li {
+            font-size: 18px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            list-style: none;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .bonuses li:before {
+            content: "🎁";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Urgency */
+        .urgency-section {
+            background: #fef2f2;
+            text-align: center;
+        }
+        
+        .urgency-text {
+            font-size: 22px;
+            color: #991b1b;
+            font-weight: 600;
+        }
+        
+        /* Guarantee */
+        .guarantee-section {
+            background: #f0fdf4;
+            text-align: center;
+        }
+        
+        .guarantee-section h2 {
+            color: #166534;
+        }
+        
+        .guarantee-badge {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        
+        .faq-item p {
+            font-size: 16px;
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            color: white;
+        }
+        
+        .final-cta p {
+            color: #94a3b8;
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-size: 32px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .steps-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your AI Outputs Aren't Bad...<br>Your Prompts Are — Fix That in Minutes</h1>
+            <p class="subheadline">Get better emails, ads, and content from AI without guessing what to type</p>
+            
+            <ul class="bullet-list">
+                <li>Stop getting generic responses</li>
+                <li>Write high-converting content faster</li>
+                <li>Use AI like top marketers</li>
+            </ul>
+            
+            <a href="#offer" class="cta-button">Get Instant Access</a>
+            
+            <p class="trust-line">✓ Used by 500+ marketers, creators, and business owners</p>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="section-tight problem-section">
+        <div class="container">
+            <p class="problem-line">You open ChatGPT...</p>
+            <p class="problem-line">Type a prompt...</p>
+            <p class="problem-line">And instantly regret it.</p>
+            <p class="problem-line" style="margin-top: 40px;">The output?</p>
+            <p class="problem-line">Generic. Robotic. Useless.</p>
+            <p class="problem-line">So you tweak it... again... and again...</p>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="section-tight solution-section">
+        <div class="container">
+            <p style="font-size: 28px; color: #991b1b; font-weight: 600; margin-bottom: 32px;">The problem isn't AI.<br>It's how you're using it.</p>
+            
+            <h2>The AI Prompt System</h2>
+            
+            <p>A complete framework that transforms how you use ChatGPT, Claude, and Gemini—so you get exactly what you need, every single time.</p>
+        </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section-tight">
+        <div class="container">
+            <h2 style="text-align: center;">What You Get</h2>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">📋</div>
+                    <h3>5-Step Prompt Framework</h3>
+                    <p>The exact system top marketers use</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📝</div>
+                    <h3>150+ Proven Prompts</h3>
+                    <p>Copy-paste ready for any task</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📄</div>
+                    <h3>Templates</h3>
+                    <p>Emails, ads, social posts & more</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💡</div>
+                    <h3>Real Examples</h3>
+                    <p>See exactly how it works</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📊</div>
+                    <h3>Cheat Sheets</h3>
+                    <p>Quick reference at your fingertips</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF SECTION -->
+    <section class="section proof-section">
+        <div class="container">
+            <h2>See The Difference</h2>
+            
+            <div class="before-after">
+                <div class="before-box">
+                    <p class="label label-red">BEFORE: What Most People Do</p>
+                    <p style="font-size: 16px; margin-bottom: 12px;"><strong>Prompt:</strong> "Write me a marketing email"</p>
+                    <div class="prompt-text">
+                        → "Introducing our new product. It helps you achieve your goals. Sign up today to get started..."
+                    </div>
+                    <p style="margin-top: 12px; color: #dc2626; font-weight: 600;">❌ Bland. Generic. Unusable.</p>
+                </div>
+                
+                <div class="after-box">
+                    <p class="label label-green">AFTER: Using The System</p>
+                    <p style="font-size: 16px; margin-bottom: 12px;"><strong>Prompt:</strong> "You are a conversion copywriter with 10 years of experience. Write a launch email for [product] aimed at [audience] struggling with [pain point]. Include: compelling subject line, specific story, solution, social proof, clear CTA. Tone: conversational. Length: under 200 words."</p>
+                    <div class="prompt-text">
+                        → "Subject: The $10K mistake costing agencies every month...<br><br>Last Tuesday, Sarah stared at her inbox at 11 PM... [engaging story]...<br><br>That's why we built [Product]...<br><br>Join 500+ agencies already saving 10 hours/week..."
+                    </div>
+                    <p style="margin-top: 12px; color: #16a34a; font-weight: 600;">✅ Specific. Engaging. Ready to use.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 48px;">
+                <p style="font-size: 22px; color: white; font-weight: 600;">"I was spending 6 hours on content that now takes 90 minutes."</p>
+                <p style="color: #94a3b8;">— Sarah K., Content Director</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section-tight" style="background: #f8fafc;">
+        <div class="container">
+            <h2 style="text-align: center;">How It Works</h2>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Use The Framework</h3>
+                    <p>Pick the right prompt structure for your task</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Paste Into AI</h3>
+                    <p>Copy-paste the proven prompt template</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Better Output</h3>
+                    <p>Receive high-quality, usable content</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER + PRICING -->
+    <section class="section pricing-section" id="offer">
+        <div class="container">
+            <div class="price-box">
+                <p style="font-size: 18px; color: #6b7280; margin-bottom: 8px;">Complete AI Prompt System</p>
+                
+                <p class="price-original">Normally $197</p>
+                <p class="price-current">$47</p>
+                
+                <ul class="bonuses">
+                    <li>5-Step Prompt Framework</li>
+                    <li>150+ Proven Prompts</li>
+                    <li>Email, Ad & Social Templates</li>
+                    <li>Real Examples & Case Studies</li>
+                    <li>Quick-Reference Cheat Sheets</li>
+                </ul>
+                
+                <a href="#" class="cta-button" style="width: 100%;" onclick="alert('Stripe checkout coming soon')">Get Instant Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCY -->
+    <section class="section-compact urgency-section">
+        <div class="container">
+            <p class="urgency-text">⚡ Launch pricing won't last. Price increases to $197 soon.</p>
+        </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section-tight guarantee-section">
+        <div class="container">
+            <div class="guarantee-badge">🛡️</div>
+            <h2>30-Day Risk-Free Guarantee</h2>
+            <p style="font-size: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">Try it. If it doesn't transform your AI results, get your money back. No questions asked.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-tight" style="background: #f8fafc;">
+        <div class="container">
+            <h2 style="text-align: center;">Questions?</h2>
+            
+            <div class="faq-item">
+                <h3>Will this work for me?</h3>
+                <p>If you use ChatGPT, Claude, or Gemini and want better results, yes. The system works regardless of your experience level.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do I need experience?</h3>
+                <p>No. The prompts are copy-paste ready. If you can use AI tools, you can use this system.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What tools do I need?</h3>
+                <p>Just ChatGPT, Claude, or any major AI tool. Everything else is included.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section final-cta">
+        <div class="container">
+            <h2>Stop Wrestling With AI.<br>Start Getting Results.</h2>
+            <p style="margin-bottom: 32px;">Join 500+ marketers who've transformed their AI output.</p>
+            <a href="#offer" class="cta-button" style="font-size: 24px; padding: 24px 56px;">Get Instant Access Now</a>
+            <p style="margin-top: 24px; color: #64748b;">30-day money-back guarantee</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Prompt System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
