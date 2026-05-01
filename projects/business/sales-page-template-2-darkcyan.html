@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Mastery — Get Better Results from ChatGPT & Claude</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0a0f1e;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a0f1e 0%, #141414 100%);
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 1px solid #1a2332;
+        }
+        
+        .eyebrow {
+            color: #00d9ff;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-sub {
+            font-size: 1.35rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-bullets {
+            list-style: none;
+            margin: 32px 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-bullets li {
+            font-size: 18px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hero-bullets li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: 700;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #0a0f1e;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(251, 191, 36, 0.4);
+        }
+        
+        .trust-line {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 20px;
+        }
+        
+        /* Video Section */
+        .video-section {
+            background: #0f172a;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #1a2332;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 28px solid #0a0f1e;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            margin-left: 10px;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: #0a0f1e;
+            padding: 100px 0;
+            border-top: 1px solid #1a2332;
+        }
+        
+        .problem h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        .problem h2 span {
+            color: #00d9ff;
+        }
+        
+        .problem-intro {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .problem-card {
+            background: linear-gradient(135deg, #141414 0%, #1a1a2e 100%);
+            border: 1px solid #1a2332;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            border-color: #00d9ff;
+            transform: translateY(-4px);
+        }
+        
+        .problem-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #fbbf24;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .problem-card p {
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Solution Section */
+        .solution {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .solution h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .solution h2 span {
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .solution p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Features Section */
+        .features {
+            background: #0a0f1e;
+            padding: 100px 0;
+            border-top: 1px solid #1a2332;
+        }
+        
+        .features h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .features h2 span {
+            color: #00d9ff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #141414 0%, #1a1a2e 100%);
+            border: 1px solid #1a2332;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .feature-content p {
+            color: #94a3b8;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 100px 0;
+        }
+        
+        .timeline h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .timeline h2 span {
+            color: #00d9ff;
+        }
+        
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #1a2332;
+        }
+        
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .timeline-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #0a0f1e;
+            flex-shrink: 0;
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .timeline-content p {
+            color: #94a3b8;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: #0a0f1e;
+            padding: 100px 0;
+            border-top: 1px solid #1a2332;
+        }
+        
+        .pricing h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .pricing h2 span {
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(135deg, #141414 0%, #1a1a2e 100%);
+            border: 1px solid #1a2332;
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #00d9ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            color: #0a0f1e;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+        
+        .pricing-card .price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 32px 0;
+        }
+        
+        .pricing-card ul li {
+            padding: 12px 0;
+            color: #94a3b8;
+            padding-left: 32px;
+            position: relative;
+            border-bottom: 1px solid #1a2332;
+            font-size: 15px;
+        }
+        
+        .pricing-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: 700;
+        }
+        
+        .pricing-card .cta-button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        /* Guarantee Section */
+        .guarantee {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .guarantee-badge {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+        
+        .guarantee h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .guarantee h2 span {
+            color: #00d9ff;
+        }
+        
+        .guarantee p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: #0a0f1e;
+            padding: 100px 0;
+            border-top: 1px solid #1a2332;
+        }
+        
+        .faq h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .faq h2 span {
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: linear-gradient(135deg, #141414 0%, #1a1a2e 100%);
+            border: 1px solid #1a2332;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .faq-q {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .faq-q::before {
+            content: 'Q:';
+            color: #00d9ff;
+        }
+        
+        .faq-a {
+            color: #94a3b8;
+            font-size: 17px;
+            line-height: 1.7;
+            padding-left: 32px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 100px 0;
+            text-align: center;
+            border-top: 1px solid #1a2332;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+        
+        .final-cta h2 span {
+            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .final-cta p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #0a0f1e;
+            color: #64748b;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 14px;
+            border-top: 1px solid #1a2332;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-bullets {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .problem-grid,
+            .features-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .faq-a {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="eyebrow">For Marketers, Business Owners & Content Creators</div>
+            <h1>Your AI Outputs Aren't Bad...<br><span>Your Prompts Are</span> — Fix That in 10 Minutes</h1>
+            <p class="hero-sub">Get better emails, ads, and content from ChatGPT & Claude without guessing what to type</p>
+            
+            <ul class="hero-bullets">
+                <li>Stop getting generic responses</li>
+                <li>Write high-converting content faster</li>
+                <li>Use AI like top marketers</li>
+            </ul>
+            
+            <a href="#pricing" class="cta-button">Start Getting Better AI Results Now</a>
+            <p class="trust-line">⭐ Used by 500+ marketers, creators, and business owners</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="play-button"></div>
+                </div>
+            </div>
+            <p style="color: #64748b; margin-top: 20px;">▲ Watch: The 5-Step Framework That Changes Everything</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Why You're Struggling With <span>AI Content</span></h2>
+            <p class="problem-intro">You've tried AI tools, but the results are disappointing. Here's what you're experiencing:</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>❌ Generic Output</h3>
+                    <p>Your AI content sounds like everyone else's—boring, robotic, and completely forgettable.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Constant Rewriting</h3>
+                    <p>You spend more time fixing AI output than if you'd written it yourself from scratch.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Inconsistent Quality</h3>
+                    <p>Sometimes it works, sometimes it doesn't. You can't rely on it for important projects.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Wasted Time</h3>
+                    <p>Hours spent tweaking prompts, trying different approaches, hoping for something usable.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Wrong Tone</h3>
+                    <p>The output never quite matches your brand voice or speaks to your audience properly.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ Falling Behind</h3>
+                    <p>While you struggle, others are using AI to create 10x more content in half the time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>Introducing: <span>AI Prompt Mastery</span></h2>
+            <p>The complete system for getting high-converting marketing content from AI—every single time. No more guessing. No more generic output. Just results.</p>
+            <a href="#pricing" class="cta-button">Get Instant Access Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Everything You Get <span>Inside</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-content">
+                        <h3>The 6 Frameworks</h3>
+                        <p>Complete system for writing prompts that get exactly what you want—every time.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <div class="feature-content">
+                        <h3>160+ Proven Prompts</h3>
+                        <p>Copy-paste ready prompts for emails, ads, social, content, SEO, and more.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <div class="feature-content">
+                        <h3>5-Module Video Course</h3>
+                        <p>2.5 hours of training showing exactly how to apply each framework.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-content">
+                        <h3>Quick-Reference Cheat Sheets</h3>
+                        <p>50 high-impact prompts, 6 frameworks guide, troubleshooting manual.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-content">
+                        <h3>Private Community</h3>
+                        <p>Connect with 500+ marketers sharing what's working right now.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-content">
+                        <h3>Monthly Updates</h3>
+                        <p>New prompts, frameworks, and tactics as AI evolves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2>How It <span>Works</span></h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Learn The Frameworks</h3>
+                        <p>Watch the video course and understand the 6 frameworks that make prompting predictable.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Use The Prompts</h3>
+                        <p>Copy-paste from our library of 160+ proven prompts for any marketing task.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Get Better Output</h3>
+                        <p>See immediate improvement in your AI results—more specific, more engaging, more usable.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Save Hours Weekly</h3>
+                        <p>Create content in minutes instead of hours. Scale your output without scaling your team.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Stay Current</h3>
+                        <p>Get monthly updates as AI evolves. Never fall behind on best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your <span>Package</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard</h3>
+                    <div class="price">$197</div>
+                    <ul>
+                        <li>6 Frameworks Training</li>
+                        <li>50 High-Impact Prompts</li>
+                        <li>Quick-Start Guide</li>
+                        <li>Email Templates</li>
+                        <li>Social Media Templates</li>
+                        <li>Community Access</li>
+                        <li>30-Day Guarantee</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming soon')">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro (Most Popular)</h3>
+                    <div class="price">$297</div>
+                    <ul>
+                        <li>Everything in Standard, plus:</li>
+                        <li>Complete 160-Prompt Library</li>
+                        <li>5-Module Video Course (2.5 hrs)</li>
+                        <li>6 Frameworks Deep Dive</li>
+                        <li>Troubleshooting Guide</li>
+                        <li>Monthly Prompt Updates</li>
+                        <li>Private Community</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming soon')">Get Pro Access</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Agency</h3>
+                    <div class="price">$497</div>
+                    <ul>
+                        <li>Everything in Pro, plus:</li>
+                        <li>Team License (5 users)</li>
+                        <li>White-Label Prompts</li>
+                        <li>Client Training Materials</li>
+                        <li>Agency Workflow Templates</li>
+                        <li>Quarterly Strategy Calls</li>
+                        <li>Direct Access to Team</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming soon')">Get Agency Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">🛡️</div>
+            <h2>30-Day <span>Money-Back Guarantee</span></h2>
+            <p>Try AI Prompt Mastery risk-free. If it doesn't transform your AI results within 30 days, get a full refund. No questions asked. We take all the risk so you can try it with confidence.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-q">Will this work for me?</div>
+                    <div class="faq-a">If you use ChatGPT, Claude, Gemini, or any major AI tool and want better results, yes. The system works regardless of your experience level.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">Do I need technical skills?</div>
+                    <div class="faq-a">No. If you can copy and paste, you can use this system. The prompts are ready to use—just fill in your specific details.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How is this different from free prompt guides?</div>
+                    <div class="faq-a">Free guides give you prompts. We give you a complete system for creating your own prompts that work for your specific situation—plus 160+ proven examples.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What tools do I need?</div>
+                    <div class="faq-a">Just ChatGPT, Claude, or any major AI tool. Everything else is included in the course.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">How long do I have access?</div>
+                    <div class="faq-a">Lifetime access to everything, plus monthly updates with new prompts and frameworks as AI evolves.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">What if I'm not satisfied?</div>
+                    <div class="faq-a">30-day money-back guarantee. If it doesn't work for you, get a full refund. No questions asked.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop Wrestling With AI.<br><span>Start Getting Results.</span></h2>
+            <p>Join 500+ marketers who've transformed their AI output. Get instant access to the complete system and start creating better content today.</p>
+            <a href="#pricing" class="cta-button">Get AI Prompt Mastery Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Prompt Mastery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
