@@ -1,409 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>{{HEADLINE}} - {{SUBHEADLINE}}</title>
- <style>
- * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
- 
- body {
- font-family: Georgia, 'Palatino Linotype', serif;
- background: #fafafa;
- color: #2d2d2d;
- line-height: 1.65;
- font-size: 18px;
- }
- 
- .page {
- max-width: 700px;
- margin: 0 auto;
- padding: 60px 40px 120px;
- }
- 
- @media (max-width: 768px) {
- .page {
- padding: 40px 24px 80px;
- }
- }
- 
- /* Hero 3-Part Headline */
- .hero {
- text-align: center;
- margin-bottom: 80px;
- }
- 
- .hero .pre-headline {
- font-size: 11px;
- font-weight: 600;
- text-transform: uppercase;
- letter-spacing: 1.5px;
- color: #f59e0b;
- margin-bottom: 24px;
- }
- 
- .hero h1 {
- font-size: 42px;
- font-weight: 900;
- color: #000;
- line-height: 1.15;
- margin-bottom: 8px;
- letter-spacing: -0.02em;
- }
- 
- .hero .mechanism {
- font-size: 40px;
- font-weight: 900;
- color: #000;
- line-height: 1.15;
- margin-bottom: 20px;
- letter-spacing: -0.02em;
- }
- 
- .hero .outcome {
- font-size: 16px;
- font-weight: 400;
- color: #718096;
- margin-bottom: 40px;
- line-height: 1.5;
- max-width: 600px;
- margin-left: auto;
- margin-right: auto;
- }
- 
- /* Typography */
- h2 {
- font-size: 32px;
- font-weight: 700;
- color: #000;
- margin-top: 48px;
- margin-bottom: 24px;
- line-height: 1.3;
- }
- 
- h3 {
- font-size: 24px;
- font-weight: 600;
- color: #2d3748;
- margin-top: 36px;
- margin-bottom: 20px;
- line-height: 1.4;
- }
- 
- p {
- margin-bottom: 16px;
- line-height: 1.65;
- }
- 
- strong {
- font-weight: 600;
- color: #000;
- }
- 
- /* Lists */
- ul {
- margin: 24px 0 24px 40px;
- }
- 
- li {
- margin-bottom: 12px;
- line-height: 1.65;
- }
- 
- /* Callouts */
- .callout {
- background: #f7fafc;
- border-left: 4px solid #16a34a;
- padding: 24px;
- margin: 32px 0;
- }
- 
- .callout p {
- margin-bottom: 12px;
- }
- 
- .callout p:last-child {
- margin-bottom: 0;
- }
- 
- .guarantee {
- background: #fef3c7;
- border: 2px solid #f59e0b;
- padding: 40px;
- margin: 48px 0;
- text-align: center;
- }
- 
- .guarantee h2 {
- margin-top: 0;
- }
- 
- /* CTA */
- .cta {
- text-align: center;
- margin: 48px 0;
- }
- 
- .btn {
- display: inline-block;
- background: #16a34a;
- color: #fff;
- padding: 18px 48px;
- font-size: 20px;
- font-weight: 700;
- text-decoration: none;
- border-radius: 8px;
- transition: background 0.2s;
- }
- 
- .btn:hover {
- background: #15803d;
- }
- 
- .price {
- font-size: 56px;
- font-weight: 900;
- color: #16a34a;
- margin: 20px 0;
- }
- 
- .old-price {
- text-decoration: line-through;color: #9ca3af;
- font-size: 24px;
- }
- 
- .subtext {
- color: #6b7280;
- font-size: 15px;
- margin-top: 16px;
- }
- 
- /* Footer */
- .footer {
- text-align: center;
- padding-top: 48px;
- border-top: 1px solid #ddd;
- color: #9ca3af;
- font-size: 14px;
- }
- 
- .footer p {
- margin-bottom: 12px;
- }
- </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local SEO Domination Playbook — Rank #1 on Google Maps</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Palatino Linotype', serif;
+      background: #fafafa;
+      color: #2d2d2d;
+      line-height: 1.65;
+      font-size: 18px;
+    }
+    .page { max-width: 750px; margin: 0 auto; padding: 60px 40px 120px; }
+    @media (max-width: 768px) { .page { padding: 40px 24px 80px; } }
+
+    .hero { text-align: center; margin-bottom: 70px; }
+    .hero .pre-headline {
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+      color: #f59e0b; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: 42px; font-weight: 900; color: #000; line-height: 1.15; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .hero .mechanism { font-size: 28px; font-weight: 800; color: #000; line-height: 1.25; margin-bottom: 16px; }
+    .hero .outcome { font-size: 16px; font-weight: 400; color: #718096; margin-bottom: 36px; line-height: 1.6; max-width: 640px; margin-left: auto; margin-right: auto; }
+
+    h2 { font-size: 30px; font-weight: 800; color: #000; margin-top: 46px; margin-bottom: 22px; line-height: 1.3; }
+    h3 { font-size: 22px; font-weight: 700; color: #2d3748; margin-top: 32px; margin-bottom: 16px; line-height: 1.4; }
+    p { margin-bottom: 16px; }
+    strong { font-weight: 700; color: #000; }
+    ul { margin: 22px 0 22px 34px; }
+    li { margin-bottom: 10px; }
+
+    .callout { background: #f7fafc; border-left: 4px solid #16a34a; padding: 24px; margin: 30px 0; }
+    .guarantee { background: #fef3c7; border: 2px solid #f59e0b; padding: 38px; margin: 46px 0; text-align: center; }
+
+    .cta { text-align: center; margin: 44px 0; }
+    .btn {
+      display: inline-block; background: #16a34a; color: #fff; padding: 18px 48px;
+      font-size: 20px; font-weight: 800; text-decoration: none; border-radius: 8px;
+    }
+    .btn:hover { background: #15803d; }
+    .subtext { color: #6b7280; font-size: 15px; margin-top: 14px; }
+    .price { font-size: 56px; font-weight: 900; color: #16a34a; margin: 18px 0; }
+    .old-price { text-decoration: line-through; color: #9ca3af; font-size: 22px; }
+
+    .footer { text-align: center; padding-top: 48px; border-top: 1px solid #ddd; color: #9ca3af; font-size: 14px; }
+    .footer p { margin-bottom: 10px; }
+  </style>
 </head>
 <body>
- <div class="page">
- 
- <div class="hero">
- <p class="pre-headline">{{PRE_HEADLINE}}</p>
- 
- <h1>{{HEADLINE}}</h1>
- <p class="mechanism">{{MECHANISM}}</p>
- <p class="outcome">{{OUTCOME}}</p>
- 
- <div class="cta">
- <a href="#offer" class="btn">{{CTA_TEXT}}</a>
- <p class="subtext">{{CTA_SUBTEXT}}</p>
- </div>
- </div>
- 
- <hr style="border: none; border-top: 1px solid #ddd; margin: 48px 0;">
- 
- <h2>{{SECTION_1_HEADLINE}}</h2>
- 
- <p>{{SECTION_1_PARA_1}}</p>
- 
- <p>{{SECTION_1_PARA_2}}</p>
- 
- <p>{{SECTION_1_PARA_3}}</p>
- 
- <p>{{SECTION_1_PARA_4}}</p>
- 
- <h2>{{SECTION_2_HEADLINE}}</h2>
- 
- <p>{{SECTION_2_PARA_1}}</p>
- 
- <p>{{SECTION_2_PARA_2}}</p>
- 
- <p>{{SECTION_2_PARA_3}}</p>
- 
- <h3>{{SECTION_2_SUBHEAD_1}}</h3>
- 
- <p>{{SECTION_2_SUB_PARA}}</p>
- 
- <ul>
- <li>{{LIST_ITEM_1}}</li>
- <li>{{LIST_ITEM_2}}</li>
- <li>{{LIST_ITEM_3}}</li>
- <li>{{LIST_ITEM_4}}</li>
- </ul>
- 
- <p>{{SECTION_2_CLOSING}}</p>
- 
- <h2>{{SECTION_3_HEADLINE}}</h2><p>{{SECTION_3_PARA_1}}</p>
- 
- <p>{{SECTION_3_PARA_2}}</p>
- 
- <p><strong>{{SECTION_3_BOLD}}</strong></p>
- 
- <h2>{{SECTION_4_HEADLINE}}</h2>
- 
- <p>{{SECTION_4_INTRO}}</p>
- 
- <div class="callout">
- <p style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">{{CALLOUT_TITLE}}</p>
- 
- <p><strong>{{STEP_1_TITLE}}</strong><br>
- {{STEP_1_DESC}}</p>
- 
- <p><strong>{{STEP_2_TITLE}}</strong><br>
- {{STEP_2_DESC}}</p>
- 
- <p><strong>{{STEP_3_TITLE}}</strong><br>
- {{STEP_3_DESC}}</p>
- 
- <p><strong>{{STEP_4_TITLE}}</strong><br>
- {{STEP_4_DESC}}</p>
- 
- <p><strong>{{STEP_5_TITLE}}</strong><br>
- {{STEP_5_DESC}}</p>
- 
- <p style="font-weight: 700; margin-top: 20px;">{{CALLOUT_SUMMARY}}</p>
- </div>
- 
- <h3>{{SECTION_4_SUBHEAD}}</h3>
- 
- <p>{{SECTION_4_SUB_PARA}}</p>
- 
- <h2>{{SECTION_5_HEADLINE}}</h2>
- 
- <h3>{{DELIVERABLE_1_TITLE}}</h3>
- <p>{{DELIVERABLE_1_DESC}}</p>
- 
- <h3>{{DELIVERABLE_2_TITLE}}</h3>
- <p>{{DELIVERABLE_2_DESC}}</p>
- 
- <h3>{{DELIVERABLE_3_TITLE}}</h3>
- <p>{{DELIVERABLE_3_DESC}}</p>
- 
- <h3>{{DELIVERABLE_4_TITLE}}</h3>
- <p>{{DELIVERABLE_4_DESC}}</p>
- 
- <h3>{{DELIVERABLE_5_TITLE}}</h3>
- <p>{{DELIVERABLE_5_DESC}}</p><h3>{{DELIVERABLE_6_TITLE}}</h3>
- <p>{{DELIVERABLE_6_DESC}}</p>
- 
- <h3>{{DELIVERABLE_7_TITLE}}</h3>
- <p>{{DELIVERABLE_7_DESC}}</p>
- 
- <h2>{{SECTION_6_HEADLINE}}</h2>
- 
- <p><strong>{{SECTION_6_INTRO}}</strong></p>
- 
- <ul>
- <li>{{BULLET_1}}</li>
- <li>{{BULLET_2}}</li>
- <li>{{BULLET_3}}</li>
- <li>{{BULLET_4}}</li>
- <li>{{BULLET_5}}</li>
- <li>{{BULLET_6}}</li>
- </ul>
- 
- <p><strong>{{SECTION_6_NOT_FOR}}</strong></p>
- 
- <ul>
- <li>{{NOT_BULLET_1}}</li>
- <li>{{NOT_BULLET_2}}</li>
- <li>{{NOT_BULLET_3}}</li>
- <li>{{NOT_BULLET_4}}</li>
- </ul>
- 
- <h2>{{SECTION_7_HEADLINE}}</h2>
- 
- <p>{{SECTION_7_PARA}}</p>
- 
- <ul>
- <li>{{PROOF_1}}</li>
- <li>{{PROOF_2}}</li>
- <li>{{PROOF_3}}</li>
- <li>{{PROOF_4}}</li>
- <li>{{PROOF_5}}</li>
- <li>{{PROOF_6}}</li>
- </ul>
- 
- <p>{{SECTION_7_CLOSING}}</p>
- 
- <h2>{{OBJECTIONS_HEADLINE}}</h2>
- 
- <h3>{{OBJECTION_1}}</h3>
- <p>{{OBJECTION_1_ANSWER}}</p>
- 
- <h3>{{OBJECTION_2}}</h3>
- <p>{{OBJECTION_2_ANSWER}}</p>
- 
- <h3>{{OBJECTION_3}}</h3>
- <p>{{OBJECTION_3_ANSWER}}</p>
- 
- <h3>{{OBJECTION_4}}</h3>
- <p>{{OBJECTION_4_ANSWER}}</p>
- 
- <h3>{{OBJECTION_5}}</h3>
- <p>{{OBJECTION_5_ANSWER}}</p>
- 
- <h3>{{OBJECTION_6}}</h3>
- <p>{{OBJECTION_6_ANSWER}}</p>
- 
- <div class="guarantee">
- <h2>{{GUARANTEE_HEADLINE}}</h2>
- 
- <p>{{GUARANTEE_PARA_1}}</p>
- 
- <p>{{GUARANTEE_PARA_2}}</p><p><strong>{{GUARANTEE_BOLD}}</strong></p>
- </div>
- 
- <h2 id="offer">{{OFFER_HEADLINE}}</h2>
- 
- <p>{{OFFER_PARA}}</p>
- 
- <ul>
- <li>{{OFFER_ITEM_1}}</li>
- <li>{{OFFER_ITEM_2}}</li>
- <li>{{OFFER_ITEM_3}}</li>
- <li>{{OFFER_ITEM_4}}</li>
- <li>{{OFFER_ITEM_5}}</li>
- <li>{{OFFER_ITEM_6}}</li>
- <li>{{OFFER_ITEM_7}}</li>
- </ul>
- 
- <p>{{OFFER_SETUP}}</p>
- 
- <p>{{OFFER_RUN}}</p>
- 
- <p>{{OFFER_SHIP}}</p>
- 
- <div class="cta">
- <p class="old-price">{{OLD_PRICE}}</p>
- <p class="price">{{NEW_PRICE}}</p>
- <p style="color: #6b7280; margin-bottom: 32px;">{{PRICE_SUBTEXT}}</p>
- 
- <a href="#" class="btn">{{FINAL_CTA}}</a>
- 
- <p class="subtext">{{FINAL_SUBTEXT}}</p>
- </div>
- 
- <p style="text-align: center; color: #9ca3af; font-size: 14px; margin-top: 48px;">{{URGENCY_TEXT}}</p>
- 
- <div class="footer">
- <p>{{FOOTER_LINE_1}}</p>
- <p>{{FOOTER_LINE_2}}</p>
- <p>{{FOOTER_LINE_3}}</p>
- </div>
- 
- </div>
+  <div class="page">
+
+    <div class="hero">
+      <p class="pre-headline">Attention Local Business Owners</p>
+      <h1>How to Rank #1 on Google Maps</h1>
+      <p class="mechanism">In 30 Days — Without Hiring an Expensive Agency</p>
+      <p class="outcome">
+        The complete step‑by‑step system for plumbers, dentists, contractors, and service businesses who’d rather run their business than learn marketing.
+      </p>
+
+      <div class="cta">
+        <a href="#offer" class="btn">Get Instant Access — $297</a>
+        <p class="subtext">One-time purchase • No monthly fees • 30‑day “rank or refund” guarantee</p>
+      </div>
+    </div>
+
+    <hr style="border: none; border-top: 1px solid #ddd; margin: 48px 0;">
+
+    <h2>Are You Invisible to Customers Who Need You Right Now?</h2>
+    <p>Every day, hundreds of people in your city search for exactly what you offer.</p>
+    <p><strong>But they find your competitors instead.</strong></p>
+    <p>Not because you’re worse… but because your competitors show up first in Google Maps when people search “best [service] near me.”</p>
+
+    <h2>Why Most Local Businesses Lose the Google Maps Game</h2>
+    <p>Most owners try one of two paths — and both are painful:</p>
+    <ul>
+      <li><strong>The agency trap:</strong> $2,000–$5,000/month + contracts… with no guarantee.</li>
+      <li><strong>The DIY overwhelm:</strong> conflicting advice, technical jargon, and no clear plan.</li>
+      <li><strong>The “hope strategy”:</strong> waiting for word-of-mouth while competitors keep taking calls.</li>
+      <li><strong>The time problem:</strong> you don’t have 10 hours/week to become a marketer.</li>
+    </ul>
+    <p>So the ranking stays stuck… and the phone stays quiet.</p>
+
+    <h2>Introducing: Local SEO Domination Playbook</h2>
+    <p>
+      This is the only local SEO system designed specifically for service business owners who want a clear, practical roadmap to climb rankings — fast.
+    </p>
+
+    <div class="callout">
+      <p style="font-size: 20px; font-weight: 800; margin-bottom: 16px;">What makes this different?</p>
+      <p><strong>It’s a 30‑day plan.</strong> Not a “course” you never finish.</p>
+      <p><strong>It’s built for non-marketers.</strong> You’ll know exactly what to do each day.</p>
+      <p><strong>It focuses on the levers that actually move Maps rankings.</strong> No fluff.</p>
+      <p style="font-weight: 800; margin-top: 16px;">Follow the checklist and watch your visibility increase.</p>
+    </div>
+
+    <h2>Your 30‑Day Roadmap (High Level)</h2>
+    <h3>Days 1–3: Foundation Setup</h3>
+    <p>Claim and optimize your Google Business Profile, fix the most common mistakes, and set up tracking.</p>
+
+    <h3>Days 4–10: Citation Blitz</h3>
+    <p>Get listed on the directories Google trusts. This often produces quick ranking jumps.</p>
+
+    <h3>Days 11–17: Review Machine</h3>
+    <p>Deploy an ethical review request process that increases trust and click‑throughs.</p>
+
+    <h3>Days 18–24: Content & Links</h3>
+    <p>Create simple content Google loves and earn local links without complicated outreach.</p>
+
+    <h3>Days 25–30: Optimize & Scale</h3>
+    <p>Double down on what’s working, remove friction, and lock in gains.</p>
+
+    <h2>What You Get</h2>
+    <ul>
+      <li>30‑day action plan checklist</li>
+      <li>Google Business Profile optimization guide</li>
+      <li>Review request templates</li>
+      <li>Citation building checklist + directory targets</li>
+      <li>Local link building ideas that don’t require cold outreach</li>
+      <li>Rank tracking spreadsheet/dashboard</li>
+    </ul>
+
+    <h2>Is This For You?</h2>
+    <p><strong>This is for you if:</strong></p>
+    <ul>
+      <li>You’re a local service business (plumber, dentist, contractor, etc.)</li>
+      <li>You want more inbound calls from people already looking for your service</li>
+      <li>You prefer a step‑by‑step plan over “marketing theory”</li>
+    </ul>
+
+    <p><strong>This is not for you if:</strong></p>
+    <ul>
+      <li>You want overnight results with zero work</li>
+      <li>You’re selling low‑intent national products (this is local SEO)</li>
+      <li>You’re hoping random tactics will replace a consistent plan</li>
+    </ul>
+
+    <div class="guarantee">
+      <h2>30‑Day “Rank or Refund” Guarantee</h2>
+      <p>Follow the playbook for 30 days.</p>
+      <p>If you don’t see measurable improvement in your Google Maps ranking, you get a full refund.</p>
+      <p><strong>No questions. No hassle.</strong></p>
+    </div>
+
+    <h2 id="offer">Choose Your Package</h2>
+    <p>Pick the option that matches how much help you want.</p>
+
+    <h3>Core Playbook — $297</h3>
+    <ul>
+      <li>Complete video course (6+ hours)</li>
+      <li>30‑day action plan PDF</li>
+      <li>Google Business Profile optimization guide</li>
+      <li>Review request templates</li>
+      <li>Citation building checklist</li>
+      <li>Rank tracking spreadsheet</li>
+      <li>Email support (30 days)</li>
+    </ul>
+
+    <h3>Pro Package — $497</h3>
+    <ul>
+      <li>Everything in Core Playbook</li>
+      <li>Done‑for‑you GMB optimization service</li>
+      <li>Advanced review generation system</li>
+      <li>Competitor analysis template</li>
+      <li>Local link building strategy guide</li>
+      <li>Monthly content calendar</li>
+      <li>Priority email support (60 days)</li>
+      <li>Private community access</li>
+    </ul>
+
+    <h3>Done‑With‑You — $1,297</h3>
+    <ul>
+      <li>Everything in Pro Package</li>
+      <li>2x 60‑minute strategy calls</li>
+      <li>Custom action plan for your business</li>
+      <li>Personal audit & optimization</li>
+      <li>Direct access (30 days)</li>
+      <li>Monthly check‑in calls (3 months)</li>
+      <li>Guaranteed ranking improvement*</li>
+    </ul>
+
+    <div class="cta">
+      <p class="old-price">$497</p>
+      <p class="price">$297</p>
+      <p style="color: #6b7280; margin-bottom: 28px;">One-time purchase • Start today</p>
+      <a href="#" class="btn" onclick="alert('Checkout link goes here')">Get Instant Access</a>
+      <p class="subtext">Secure checkout link goes here</p>
+    </div>
+
+    <p style="text-align: center; color: #9ca3af; font-size: 14px; margin-top: 48px;">
+      Limited time pricing may change — grab it while it’s available.
+    </p>
+
+    <div class="footer">
+      <p>&copy; 2026 Local SEO Domination Playbook. All rights reserved.</p>
+      <p>Support: support@yourdomain.com</p>
+      <p>Terms • Privacy</p>
+    </div>
+
+  </div>
 </body>
 </html>
