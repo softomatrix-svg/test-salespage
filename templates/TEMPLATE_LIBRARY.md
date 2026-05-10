@@ -4,6 +4,58 @@ A collection of proven, high-converting sales page templates ready to use.
 
 ## Available Templates
 
+### 6. Solar Lead (from solar-lead-eight) — 3 Variants
+**Files:**
+- `solar-lead-eight-professional-gold.html`
+- `solar-lead-eight-dark-cyan.html`
+- `solar-lead-eight-minimal-serif.html`
+
+**Best for:** Solar lead-gen / homeowner lead capture / “free savings report” offers
+
+**Notes:**
+- These are **new templates** created from the live page content at `solar-lead-eight.vercel.app`.
+- They do **not** overwrite any existing templates or sales pages.
+
+---
+
+### 4. ProspectReach Dark/Green Template (Standalone)
+**Folder:** `library-prospectreach-dark-green/`
+
+**Best for:** Modern agency/SaaS landing pages, lead-gen offers, "book a demo" pages
+
+**Style:**
+- Dark theme (`#0F0F0F`) with neon green accents (`#08EC10`) and purple (`#5321CA`)
+- Card/grid layout, rounded borders, simple CTAs
+- Includes a progress-bar section + “TOP” button behavior
+
+**How to use:**
+- Open `library-prospectreach-dark-green/index.html` directly (no build step)
+- Replace content and swap images in `library-prospectreach-dark-green/assets/`
+
+---
+
+### 5. ProspectReach Dark/Green Template (Next.js + Tailwind)
+**Folder:** `library-prospectreach-next/`
+
+**Best for:** Same as above, but when you want Vercel/Next.js structure and easy componentization
+
+**Style/Colors:** same as the standalone version
+
+**Key Features:**
+- Next.js App Router + Tailwind
+- `WatermarkedImage` component (defaults to overlay text **IMAGE PLACEMENT HOLDER**)
+- Progress bar animation component
+
+**Run locally:**
+```bash
+cd templates/library-prospectreach-next
+npm install
+npm run dev
+```
+
+---
+
+
 ### 1. Minimal Serif Template
 **File:** `minimal-serif-template.html`
 
@@ -114,7 +166,10 @@ Templates follow this naming pattern:
 Current Templates:
 - `minimal-serif-template.html` - Light, text-focused, serif typography
 - `professional-gold-template.html` - Clean, structured, gold accents
-- `dark-cyan-template.html` - Dark theme, cyan accents
+- `dark-cyan-sales-template.html` - Dark theme, cyan accents
+- `solar-lead-eight-minimal-serif.html` - Solar lead-gen copy in Minimal Serif style
+- `solar-lead-eight-professional-gold.html` - Solar lead-gen copy in Professional Gold style
+- `solar-lead-eight-dark-cyan.html` - Solar lead-gen copy in Dark Cyan style
 
 Future Templates:
 - `bold-red-template.html` (planned)
