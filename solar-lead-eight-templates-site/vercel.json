@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/v1", "destination": "/v1/index.html" },
+    { "source": "/v2", "destination": "/v2/index.html" },
+    { "source": "/v3", "destination": "/v3/index.html" }
+  ]
+}
