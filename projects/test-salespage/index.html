@@ -11,9 +11,23 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --bg-base: #0b0718;
+            --bg-panel: #130b26;
+            --bg-surface: #1d0f44;
+            --bg-glow: #381d55;
+            --bg-warm: #492834;
+            --border-soft: rgba(135, 92, 173, 0.28);
+            --text-muted: #b6b0c9;
+            --text-dim: #8d88a3;
+            --bg-gradient-main: linear-gradient(135deg, #341a77 0%, #381d55 22%, #1d0f44 42%, #492834 68%, #130b26 84%, #0b0718 100%);
+            --bg-gradient-section: linear-gradient(135deg, rgba(56, 29, 85, 0.95) 0%, rgba(29, 15, 68, 0.96) 38%, rgba(73, 40, 52, 0.92) 68%, rgba(11, 7, 24, 0.98) 100%);
+            --bg-gradient-panel: linear-gradient(135deg, rgba(52, 26, 119, 0.34) 0%, rgba(56, 29, 85, 0.3) 28%, rgba(29, 15, 68, 0.55) 70%, rgba(11, 7, 24, 0.9) 100%);
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #0a0f1e;
+            background: var(--bg-base);
             color: #fff;
             line-height: 1.6;
         }
@@ -26,10 +40,10 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0a0f1e 0%, #141414 100%);
+            background: var(--bg-gradient-main);
             padding: 80px 0;
             text-align: center;
-            border-bottom: 1px solid #1a2332;
+            border-bottom: 1px solid var(--border-soft);
         }
         
         .eyebrow {
@@ -60,7 +74,7 @@
         
         .subheadline {
             font-size: 1.5rem;
-            color: #94a3b8;
+            color: var(--text-muted);
             max-width: 700px;
             margin: 0 auto 40px;
         }
@@ -68,10 +82,11 @@
         .video-container {
             max-width: 800px;
             margin: 40px auto;
-            background: #141414;
+            background: var(--bg-gradient-panel);
             border-radius: 12px;
             padding: 20px;
-            border: 1px solid #1a2332;
+            border: 1px solid var(--border-soft);
+            box-shadow: 0 22px 70px rgba(7, 3, 20, 0.45);
         }
         
         .video-wrapper {
@@ -103,12 +118,12 @@
         
         .video-placeholder {
             aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #1a2332 0%, #0a0f1e 100%);
+            background: var(--bg-gradient-section);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #64748b;
+            color: var(--text-dim);
             font-size: 1.2rem;
         }
         
@@ -134,7 +149,7 @@
         /* Problem Section */
         .problem {
             padding: 80px 0;
-            background: #0a0f1e;
+            background: radial-gradient(circle at top left, rgba(56, 29, 85, 0.35), transparent 35%), var(--bg-base);
         }
         
         .problem h2 {
@@ -149,7 +164,7 @@
         
         .problem-intro {
             text-align: center;
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 1.25rem;
             max-width: 700px;
             margin: 0 auto 60px;
@@ -163,10 +178,11 @@
         }
         
         .problem-card {
-            background: #141414;
-            border: 1px solid #1a2332;
+            background: var(--bg-gradient-panel);
+            border: 1px solid var(--border-soft);
             border-radius: 12px;
             padding: 30px;
+            box-shadow: 0 18px 48px rgba(7, 3, 20, 0.22);
         }
         
         .problem-card h3 {
@@ -176,13 +192,13 @@
         }
         
         .problem-card p {
-            color: #94a3b8;
+            color: var(--text-muted);
         }
         
         /* Solution Section */
         .solution {
             padding: 80px 0;
-            background: linear-gradient(135deg, #141414 0%, #0a0f1e 100%);
+            background: var(--bg-gradient-section);
         }
         
         .solution h2 {
@@ -200,7 +216,7 @@
         
         .solution-intro {
             text-align: center;
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 1.25rem;
             max-width: 700px;
             margin: 0 auto 60px;
@@ -214,8 +230,8 @@
         }
         
         .feature-card {
-            background: #0a0f1e;
-            border: 1px solid #1a2332;
+            background: var(--bg-gradient-panel);
+            border: 1px solid var(--border-soft);
             border-radius: 12px;
             padding: 30px;
             display: flex;
@@ -240,14 +256,14 @@
         }
         
         .feature-content p {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 0.95rem;
         }
         
         /* Timeline Section */
         .timeline {
             padding: 80px 0;
-            background: #0a0f1e;
+            background: radial-gradient(circle at bottom right, rgba(73, 40, 52, 0.28), transparent 32%), var(--bg-base);
         }
         
         .timeline h2 {
@@ -279,7 +295,7 @@
             top: 60px;
             bottom: -40px;
             width: 2px;
-            background: #1a2332;
+            background: linear-gradient(180deg, rgba(56, 29, 85, 0.95) 0%, rgba(73, 40, 52, 0.65) 100%);
         }
         
         .timeline-item:last-child::before {
@@ -306,13 +322,13 @@
         }
         
         .timeline-content p {
-            color: #94a3b8;
+            color: var(--text-muted);
         }
         
         /* Pricing Section */
         .pricing {
             padding: 80px 0;
-            background: linear-gradient(135deg, #141414 0%, #0a0f1e 100%);
+            background: var(--bg-gradient-section);
         }
         
         .pricing h2 {
@@ -323,7 +339,7 @@
         
         .pricing-intro {
             text-align: center;
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 1.25rem;
             max-width: 700px;
             margin: 0 auto 60px;
@@ -338,12 +354,13 @@
         }
         
         .pricing-card {
-            background: #0a0f1e;
-            border: 1px solid #1a2332;
+            background: var(--bg-gradient-panel);
+            border: 1px solid var(--border-soft);
             border-radius: 16px;
             padding: 40px 30px;
             text-align: center;
             position: relative;
+            box-shadow: 0 18px 48px rgba(7, 3, 20, 0.2);
         }
         
         .pricing-card.featured {
@@ -378,7 +395,7 @@
         
         .pricing-card .price span {
             font-size: 1rem;
-            color: #64748b;
+            color: var(--text-dim);
         }
         
         .pricing-card ul {
@@ -389,7 +406,7 @@
         
         .pricing-card ul li {
             padding: 10px 0;
-            color: #94a3b8;
+            color: var(--text-muted);
             padding-left: 30px;
             position: relative;
         }
@@ -410,7 +427,7 @@
         /* Guarantee Section */
         .guarantee {
             padding: 80px 0;
-            background: #0a0f1e;
+            background: radial-gradient(circle at center, rgba(56, 29, 85, 0.22), transparent 42%), var(--bg-base);
             text-align: center;
         }
         
@@ -434,7 +451,7 @@
         }
         
         .guarantee p {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 1.25rem;
             max-width: 700px;
             margin: 0 auto;
@@ -443,7 +460,7 @@
         /* FAQ Section */
         .faq {
             padding: 80px 0;
-            background: linear-gradient(135deg, #141414 0%, #0a0f1e 100%);
+            background: var(--bg-gradient-section);
         }
         
         .faq h2 {
@@ -458,8 +475,8 @@
         }
         
         .faq-item {
-            background: #0a0f1e;
-            border: 1px solid #1a2332;
+            background: var(--bg-gradient-panel);
+            border: 1px solid var(--border-soft);
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 16px;
@@ -472,15 +489,15 @@
         }
         
         .faq-item p {
-            color: #94a3b8;
+            color: var(--text-muted);
         }
         
         /* Final CTA */
         .final-cta {
             padding: 100px 0;
-            background: linear-gradient(135deg, #0a0f1e 0%, #141414 100%);
+            background: var(--bg-gradient-main);
             text-align: center;
-            border-top: 1px solid #1a2332;
+            border-top: 1px solid var(--border-soft);
         }
         
         .final-cta h2 {
@@ -489,7 +506,7 @@
         }
         
         .final-cta p {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 1.25rem;
             max-width: 600px;
             margin: 0 auto 40px;
@@ -503,10 +520,10 @@
         /* Footer */
         footer {
             padding: 40px 0;
-            background: #0a0f1e;
+            background: var(--bg-base);
             text-align: center;
-            color: #64748b;
-            border-top: 1px solid #1a2332;
+            color: var(--text-dim);
+            border-top: 1px solid var(--border-soft);
         }
         
         /* Responsive */
