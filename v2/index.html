@@ -11,101 +11,90 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --bg-base: #0b0718;
-            --bg-panel: #130b26;
-            --bg-surface: #1d0f44;
-            --bg-glow: #381d55;
-            --bg-warm: #492834;
-            --border-soft: rgba(135, 92, 173, 0.28);
-            --text-muted: #b6b0c9;
-            --text-dim: #8d88a3;
-            --bg-gradient-main: linear-gradient(135deg, #341a77 0%, #381d55 22%, #1d0f44 42%, #492834 68%, #130b26 84%, #0b0718 100%);
-            --bg-gradient-section: linear-gradient(135deg, rgba(56, 29, 85, 0.95) 0%, rgba(29, 15, 68, 0.96) 38%, rgba(73, 40, 52, 0.92) 68%, rgba(11, 7, 24, 0.98) 100%);
-            --bg-gradient-panel: linear-gradient(135deg, rgba(52, 26, 119, 0.34) 0%, rgba(56, 29, 85, 0.3) 28%, rgba(29, 15, 68, 0.55) 70%, rgba(11, 7, 24, 0.9) 100%);
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: var(--bg-base);
-            color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
             line-height: 1.6;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
         
         /* Hero Section */
         .hero {
-            background: var(--bg-gradient-main);
-            padding: 80px 0;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            padding: 100px 0 80px;
             text-align: center;
-            border-bottom: 1px solid var(--border-soft);
+            border-bottom: 1px solid #e2e8f0;
         }
         
         .eyebrow {
-            color: #00d9ff;
-            font-size: 14px;
+            color: #6366f1;
+            font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
         }
         
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 24px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 28px;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            color: #0f172a;
         }
         
         .hero h1 .highlight {
-            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #6366f1;
+            position: relative;
+        }
+        
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: rgba(99, 102, 241, 0.2);
+            z-index: -1;
         }
         
         .subheadline {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 40px;
+            font-size: 1.35rem;
+            color: #64748b;
+            max-width: 680px;
+            margin: 0 auto 48px;
+            font-weight: 400;
         }
         
         .video-container {
             max-width: 800px;
-            margin: 40px auto;
-            background: var(--bg-gradient-panel);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid var(--border-soft);
-            box-shadow: 0 22px 70px rgba(7, 3, 20, 0.45);
+            margin: 48px auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
         }
         
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 12px;
         }
         
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
+        .video-wrapper iframe,
         .video-wrapper video {
             position: absolute;
             top: 0;
@@ -113,135 +102,136 @@
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 8px;
-        }
-        
-        .video-placeholder {
-            aspect-ratio: 16/9;
-            background: var(--bg-gradient-section);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-dim);
-            font-size: 1.2rem;
+            border-radius: 12px;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-            color: #0a0f1e;
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding: 20px 48px;
+            background: #6366f1;
+            color: #ffffff;
+            font-size: 1.125rem;
+            font-weight: 600;
+            padding: 18px 40px;
             border-radius: 8px;
             text-decoration: none;
-            margin-top: 30px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+            margin-top: 32px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
         }
         
         .cta-button:hover {
+            background: #4f46e5;
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.4);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
         }
         
         /* Problem Section */
         .problem {
-            padding: 80px 0;
-            background: radial-gradient(circle at top left, rgba(56, 29, 85, 0.35), transparent 35%), var(--bg-base);
+            padding: 100px 0;
+            background: #ffffff;
         }
         
         .problem h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
+            color: #0f172a;
         }
         
         .problem h2 .highlight {
-            color: #ef4444;
+            color: #dc2626;
         }
         
         .problem-intro {
             text-align: center;
-            color: var(--text-muted);
+            color: #64748b;
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 60px;
+            max-width: 680px;
+            margin: 0 auto 64px;
         }
         
         .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
         }
         
         .problem-card {
-            background: var(--bg-gradient-panel);
-            border: 1px solid var(--border-soft);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 18px 48px rgba(7, 3, 20, 0.22);
+            padding: 32px;
+            transition: all 0.2s ease;
+        }
+        
+        .problem-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
         }
         
         .problem-card h3 {
-            color: #fbbf24;
+            color: #0f172a;
             font-size: 1.1rem;
             margin-bottom: 12px;
+            font-weight: 600;
         }
         
         .problem-card p {
-            color: var(--text-muted);
+            color: #64748b;
+            line-height: 1.7;
         }
         
         /* Solution Section */
         .solution {
-            padding: 80px 0;
-            background: var(--bg-gradient-section);
+            padding: 100px 0;
+            background: #f8fafc;
         }
         
         .solution h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
+            color: #0f172a;
         }
         
         .solution h2 .highlight {
-            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #6366f1;
         }
         
         .solution-intro {
             text-align: center;
-            color: var(--text-muted);
+            color: #64748b;
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 60px;
+            max-width: 680px;
+            margin: 0 auto 64px;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
         }
         
         .feature-card {
-            background: var(--bg-gradient-panel);
-            border: 1px solid var(--border-soft);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 30px;
+            padding: 32px;
             display: flex;
             gap: 20px;
+            transition: all 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         
         .feature-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            width: 48px;
+            height: 48px;
+            background: #eef2ff;
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -251,25 +241,29 @@
         }
         
         .feature-content h3 {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin-bottom: 8px;
+            color: #0f172a;
+            font-weight: 600;
         }
         
         .feature-content p {
-            color: var(--text-muted);
+            color: #64748b;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         /* Timeline Section */
         .timeline {
-            padding: 80px 0;
-            background: radial-gradient(circle at bottom right, rgba(73, 40, 52, 0.28), transparent 32%), var(--bg-base);
+            padding: 100px 0;
+            background: #ffffff;
         }
         
         .timeline h2 {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 64px;
+            color: #0f172a;
         }
         
         .timeline h2 .highlight {
@@ -283,19 +277,19 @@
         
         .timeline-item {
             display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 28px;
+            margin-bottom: 48px;
             position: relative;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: 25px;
-            top: 60px;
-            bottom: -40px;
+            left: 23px;
+            top: 56px;
+            bottom: -48px;
             width: 2px;
-            background: linear-gradient(180deg, rgba(56, 29, 85, 0.95) 0%, rgba(73, 40, 52, 0.65) 100%);
+            background: #e2e8f0;
         }
         
         .timeline-item:last-child::before {
@@ -303,69 +297,78 @@
         }
         
         .timeline-number {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
+            width: 48px;
+            height: 48px;
+            background: #6366f1;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #ffffff;
             flex-shrink: 0;
             z-index: 1;
         }
         
         .timeline-content h3 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 8px;
+            color: #0f172a;
+            font-weight: 600;
         }
         
         .timeline-content p {
-            color: var(--text-muted);
+            color: #64748b;
+            line-height: 1.7;
         }
         
         /* Pricing Section */
         .pricing {
-            padding: 80px 0;
-            background: var(--bg-gradient-section);
+            padding: 100px 0;
+            background: #f8fafc;
         }
         
         .pricing h2 {
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
+            color: #0f172a;
         }
         
         .pricing-intro {
             text-align: center;
-            color: var(--text-muted);
+            color: #64748b;
             font-size: 1.25rem;
-            max-width: 700px;
-            margin: 0 auto 60px;
+            max-width: 680px;
+            margin: 0 auto 64px;
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .pricing-card {
-            background: var(--bg-gradient-panel);
-            border: 1px solid var(--border-soft);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 40px 32px;
             text-align: center;
             position: relative;
-            box-shadow: 0 18px 48px rgba(7, 3, 20, 0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .pricing-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
         
         .pricing-card.featured {
-            border: 2px solid #00d9ff;
-            transform: scale(1.05);
+            border: 2px solid #6366f1;
+            transform: scale(1.03);
         }
         
         .pricing-card.featured::before {
@@ -374,41 +377,47 @@
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
-            background: linear-gradient(135deg, #00d9ff 0%, #10b981 100%);
-            color: #0a0f1e;
-            font-size: 0.75rem;
-            font-weight: 700;
+            background: #6366f1;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 600;
             padding: 6px 16px;
             border-radius: 20px;
+            letter-spacing: 1px;
         }
         
         .pricing-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            color: #0f172a;
+            font-weight: 600;
         }
         
         .pricing-card .price {
             font-size: 3rem;
-            font-weight: 800;
-            margin: 20px 0;
+            font-weight: 700;
+            margin: 24px 0;
+            color: #0f172a;
         }
         
         .pricing-card .price span {
             font-size: 1rem;
-            color: var(--text-dim);
+            color: #94a3b8;
+            font-weight: 400;
         }
         
         .pricing-card ul {
             list-style: none;
             text-align: left;
-            margin: 30px 0;
+            margin: 32px 0;
         }
         
         .pricing-card ul li {
-            padding: 10px 0;
-            color: var(--text-muted);
-            padding-left: 30px;
+            padding: 12px 0;
+            color: #475569;
+            padding-left: 32px;
             position: relative;
+            font-size: 0.95rem;
         }
         
         .pricing-card ul li::before {
@@ -421,52 +430,57 @@
         
         .pricing-card .cta-button {
             width: 100%;
-            margin-top: 20px;
+            margin-top: 24px;
+            padding: 16px 32px;
         }
         
         /* Guarantee Section */
         .guarantee {
-            padding: 80px 0;
-            background: radial-gradient(circle at center, rgba(56, 29, 85, 0.22), transparent 42%), var(--bg-base);
+            padding: 100px 0;
+            background: #ffffff;
             text-align: center;
         }
         
         .guarantee-badge {
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, #10b981 0%, #00d9ff 100%);
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
-            font-size: 2rem;
-            font-weight: 800;
-            color: #0a0f1e;
+            margin: 0 auto 32px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
         }
         
         .guarantee h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #0f172a;
         }
         
         .guarantee p {
-            color: var(--text-muted);
+            color: #64748b;
             font-size: 1.25rem;
-            max-width: 700px;
+            max-width: 680px;
             margin: 0 auto;
+            line-height: 1.7;
         }
         
         /* FAQ Section */
         .faq {
-            padding: 80px 0;
-            background: var(--bg-gradient-section);
+            padding: 100px 0;
+            background: #f8fafc;
         }
         
         .faq h2 {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 64px;
+            color: #0f172a;
         }
         
         .faq-container {
@@ -475,61 +489,74 @@
         }
         
         .faq-item {
-            background: var(--bg-gradient-panel);
-            border: 1px solid var(--border-soft);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 24px;
+            padding: 28px;
             margin-bottom: 16px;
+            transition: all 0.2s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         
         .faq-item h3 {
             font-size: 1.1rem;
             margin-bottom: 12px;
-            color: #00d9ff;
+            color: #0f172a;
+            font-weight: 600;
         }
         
         .faq-item p {
-            color: var(--text-muted);
+            color: #64748b;
+            line-height: 1.7;
         }
         
         /* Final CTA */
         .final-cta {
-            padding: 100px 0;
-            background: var(--bg-gradient-main);
+            padding: 120px 0;
+            background: #0f172a;
             text-align: center;
-            border-top: 1px solid var(--border-soft);
         }
         
         .final-cta h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.75rem;
+            margin-bottom: 24px;
+            color: #ffffff;
         }
         
         .final-cta p {
-            color: var(--text-muted);
+            color: #94a3b8;
             font-size: 1.25rem;
             max-width: 600px;
-            margin: 0 auto 40px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
         }
         
         .final-cta .cta-button {
-            font-size: 1.5rem;
-            padding: 24px 60px;
+            font-size: 1.25rem;
+            padding: 20px 48px;
+            background: #6366f1;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #4f46e5;
         }
         
         /* Footer */
         footer {
-            padding: 40px 0;
-            background: var(--bg-base);
+            padding: 48px 0;
+            background: #0f172a;
             text-align: center;
-            color: var(--text-dim);
-            border-top: 1px solid var(--border-soft);
+            color: #64748b;
+            border-top: 1px solid #1e293b;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.25rem;
             }
             
             .subheadline {
@@ -539,6 +566,11 @@
             .pricing-card.featured {
                 transform: none;
             }
+            
+            .features-grid,
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -546,69 +578,53 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="eyebrow">For creators, coaches, and consultants</div>
-            <h1>Turn attention into leads with a <span class="highlight">clean funnel system</span> you can launch fast</h1>
-            <p class="subheadline">Creator Funnel-in-a-Box gives you the pages, copy, and follow-up flow to capture leads and move them toward your offer without overbuilding your backend.</p>
+            <div class="eyebrow">Attention Local Business Owners</div>
+            <h1>How to <span class="highlight">Rank #1 on Google Maps</span> in 30 Days Without Hiring an Expensive Agency</h1>
+            <p class="subheadline">The complete step-by-step system for plumbers, dentists, contractors, and service businesses who'd rather fix toilets than learn marketing</p>
             
             <div class="video-container">
-                <div class="video-placeholder" style="padding: 40px; text-align: left; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
-                    <div style="padding: 18px; border-radius: 12px; background: rgba(52,26,119,.28); border: 1px solid rgba(255,255,255,.08);">
-                        <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; color: #d7c8ff;">Landing Page</div>
-                        <strong style="display:block; color:#fff; margin-bottom:6px;">Clear promise</strong>
-                        <span>Make the next step obvious.</span>
-                    </div>
-                    <div style="padding: 18px; border-radius: 12px; background: rgba(73,40,52,.28); border: 1px solid rgba(255,255,255,.08);">
-                        <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; color: #ffd8c7;">Thank-You Page</div>
-                        <strong style="display:block; color:#fff; margin-bottom:6px;">Keep momentum</strong>
-                        <span>Guide people after the click.</span>
-                    </div>
-                    <div style="padding: 18px; border-radius: 12px; background: rgba(56,29,85,.28); border: 1px solid rgba(255,255,255,.08);">
-                        <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; color: #e8cfff;">Email Sequence</div>
-                        <strong style="display:block; color:#fff; margin-bottom:6px;">7 follow-up emails</strong>
-                        <span>Keep the message aligned.</span>
-                    </div>
-                    <div style="padding: 18px; border-radius: 12px; background: rgba(29,15,68,.32); border: 1px solid rgba(255,255,255,.08);">
-                        <div style="font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; color: #c7d9ff;">CTA Swipe File</div>
-                        <strong style="display:block; color:#fff; margin-bottom:6px;">Use proven prompts</strong>
-                        <span>Stop guessing what to write.</span>
-                    </div>
+                <div class="video-wrapper">
+                    <video controls playsinline>
+                        <source src="https://pwmkt.com/ari.mp4#t=2" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
             
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=softomatrix@gmail.com&su=Creator%20Funnel%20Access%20Request" target="_blank" rel="noopener noreferrer" class="cta-button">Request Access — $97</a>
+            <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2>Most creators don’t need more <span class="highlight">content</span> first</h2>
-            <p class="problem-intro">They need a cleaner handoff after the click. The content gets attention — but the path after that is vague, disconnected, or missing entirely.</p>
+            <h2>Are You <span class="highlight">Invisible</span> to Customers Who Need You Right Now?</h2>
+            <p class="problem-intro">Every day, hundreds of people in your city search for exactly what you offer. But they find your competitors instead.</p>
             
             <div class="problem-grid">
                 <div class="problem-card">
-                    <h3>👀 People click</h3>
-                    <p>Interest exists. The audience is not the issue.</p>
+                    <h3>🔍 The "Best [Service] Near Me" Problem</h3>
+                    <p>When someone searches "best plumber near me" or "emergency dentist [your city]" — you're not showing up. Your competitors are stealing those calls.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>🌀 The next step gets messy</h3>
-                    <p>The landing page is weak, the CTA is off, or the follow-up breaks right when momentum matters most.</p>
+                    <h3>💸 The Agency Trap</h3>
+                    <p>Marketing agencies charge $2,000-$5,000/month with 6-month contracts. You pay whether you get results or not. Most small businesses can't afford that gamble.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>🪫 Leads leak away</h3>
-                    <p>Not because the offer is bad — because the path feels unclear and disconnected.</p>
+                    <h3>😵 The DIY Overwhelm</h3>
+                    <p>You've tried learning SEO from YouTube. But every video contradicts the last one. Technical jargon, conflicting advice, and no clear action plan.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>✍️ No more vague landing pages</h3>
-                    <p>If the promise and next action aren’t obvious, people bounce before they ever see the value.</p>
+                    <h3>📉 The Slow Death</h3>
+                    <p>Month after month, fewer calls. Fewer leads. Your competitors with worse reviews and higher prices are booking jobs that should be yours.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>🔗 No more broken follow-up continuity</h3>
-                    <p>When the thank-you page and email sequence don’t match the front-end promise, trust drops fast.</p>
+                    <h3>⏰ The Time Problem</h3>
+                    <p>You're already working 50+ hours/week. You don't have time to become a marketing expert. You need customers, not another job.</p>
                 </div>
                 <div class="problem-card">
-                    <h3>🧰 No more overcomplicated tools</h3>
-                    <p>You don’t need a bloated stack. You need a clean conversion path you can actually launch.</p>
+                    <h3>🎲 The Hope Strategy</h3>
+                    <p>Word of mouth used to work. Now? You're hoping the phone rings. Hope is not a business strategy — and it's definitely not paying your bills.</p>
                 </div>
             </div>
         </div>
@@ -617,50 +633,50 @@
     <!-- Solution Section -->
     <section class="solution">
         <div class="container">
-            <h2>Build a <span class="highlight">clean conversion path</span> without rebuilding your whole business</h2>
-            <p class="solution-intro">This is for people who already have an offer and want the simplest path from attention to lead capture, nurture, and action.</p>
+            <h2>Introducing the <span class="highlight">Local SEO Domination Playbook</span></h2>
+            <p class="solution-intro">The only local SEO system designed specifically for business owners who'd rather fix toilets, pull teeth, or build houses than learn marketing.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🧲</div>
+                    <div class="feature-icon">📋</div>
                     <div class="feature-content">
-                        <h3>Landing Page Template</h3>
-                        <p>A lead-capture page structure that’s easy to adapt to your offer and makes the next step obvious.</p>
+                        <h3>30-Day Action Plan</h3>
+                        <p>No guessing. No overwhelm. Just follow the daily checklist and watch your rankings climb. Designed for busy business owners with zero marketing experience.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">➡️</div>
+                    <div class="feature-icon">🎯</div>
                     <div class="feature-content">
-                        <h3>Thank-You Page Template</h3>
-                        <p>Guide the next step immediately after the click or purchase so momentum doesn’t die on the thank-you page.</p>
+                        <h3>Google Maps Optimization</h3>
+                        <p>The exact steps to claim, verify, and optimize your Google Business Profile. Most businesses do this wrong — you'll do it right.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">✉️</div>
+                    <div class="feature-icon">⭐</div>
                     <div class="feature-content">
-                        <h3>7-Email Nurture Sequence</h3>
-                        <p>Keep the message aligned across the full path instead of losing warm leads after the initial opt-in.</p>
+                        <h3>Review Generation System</h3>
+                        <p>Ethical, automated templates to get more 5-star reviews without begging. Reviews = trust = phone calls = revenue.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🗣️</div>
+                    <div class="feature-icon">🔗</div>
                     <div class="feature-content">
-                        <h3>CTA Swipe File</h3>
-                        <p>Use proven buttons, prompts, and transition lines instead of guessing what to write each time.</p>
+                        <h3>Local Link Building</h3>
+                        <p>Simple ways to get other local websites linking to yours. No outreach required. Just smart positioning in your community.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">✅</div>
+                    <div class="feature-icon">📱</div>
                     <div class="feature-content">
-                        <h3>Funnel Setup Checklist</h3>
-                        <p>A practical implementation checklist that helps you ship faster without getting buried in setup tasks.</p>
+                        <h3>Citation Building Templates</h3>
+                        <p>Get listed on 50+ directories that Google trusts. Copy-paste templates included. Takes 2 hours, works forever.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">💡</div>
+                    <div class="feature-icon">📊</div>
                     <div class="feature-content">
-                        <h3>Lead Magnet Bonus Ideas</h3>
-                        <p>Use niche-specific prompts to create stronger entry points into the funnel and make the opt-in feel easier.</p>
+                        <h3>Rank Tracking Dashboard</h3>
+                        <p>Simple spreadsheet to track your progress. Watch yourself move from page 3 to page 1 to position #1.</p>
                     </div>
                 </div>
             </div>
@@ -670,35 +686,42 @@
     <!-- Timeline Section -->
     <section class="timeline">
         <div class="container">
-            <h2>A simple <span class="highlight">4-step build path</span></h2>
+            <h2>Your <span class="highlight">30-Day Roadmap</span> to #1 Rankings</h2>
             
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-number">1</div>
                     <div class="timeline-content">
-                        <h3>Clarify the one next action</h3>
-                        <p>Decide what the visitor should do: opt in, book, apply, or buy. The whole funnel works better when this stays simple.</p>
+                        <h3>Days 1-3: Foundation Setup</h3>
+                        <p>Claim and optimize your Google Business Profile. Fix the 7 critical mistakes 90% of businesses make. Set up tracking so you know what's working.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-number">2</div>
                     <div class="timeline-content">
-                        <h3>Customize the landing page</h3>
-                        <p>Match the headline, subheadline, and CTA to your audience and offer so the promise feels sharp right away.</p>
+                        <h3>Days 4-10: Citation Blitz</h3>
+                        <p>Get listed on the 50 most important directories. Use our copy-paste templates. This alone often jumps you 10+ positions.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-number">3</div>
                     <div class="timeline-content">
-                        <h3>Set the thank-you flow</h3>
-                        <p>Keep momentum after the click with a clear next-step page that continues the same message instead of dropping it.</p>
+                        <h3>Days 11-17: Review Machine</h3>
+                        <p>Deploy our ethical review request system. Turn happy customers into online advocates. Watch your star rating and review count climb.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-number">4</div>
                     <div class="timeline-content">
-                        <h3>Load the follow-up emails</h3>
-                        <p>Keep the message aligned across the full path instead of losing buyers in a weak or disconnected follow-up sequence.</p>
+                        <h3>Days 18-24: Content & Links</h3>
+                        <p>Create simple, effective content that Google loves. Build local links without cold outreach. Position yourself as the local authority.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <div class="timeline-content">
+                        <h3>Days 25-30: Optimize & Scale</h3>
+                        <p>Fine-tune based on results. Double down on what's working. Lock in your #1 position and start capturing competitor traffic.</p>
                     </div>
                 </div>
             </div>
@@ -708,25 +731,54 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2>Everything you need for a <span class="highlight">cleaner lead flow</span></h2>
-            <p class="pricing-intro">A practical funnel kit for creators, coaches, and consultants who want a cleaner conversion path without making the backend messy.</p>
+            <h2>Choose Your <span class="highlight">Domination Package</span></h2>
+            <p class="pricing-intro">Everything you need to rank #1 on Google Maps. No monthly fees. No contracts. Just results.</p>
             
             <div class="pricing-grid">
-                <div class="pricing-card featured" style="max-width: 760px; margin: 0 auto; grid-column: 1 / -1;">
-                    <h3>Creator Funnel-in-a-Box</h3>
-                    <div class="price">$97 <span>one-time</span></div>
-                    <p style="color: var(--text-muted); margin-bottom: 20px;">A practical starting system for people who want a cleaner conversion flow without making the backend messy.</p>
+                <div class="pricing-card">
+                    <h3>Core Playbook</h3>
+                    <div class="price">$297 <span>one-time</span></div>
                     <ul>
-                        <li>Landing page template</li>
-                        <li>Thank-you page template</li>
-                        <li>7-email sequence</li>
-                        <li>CTA swipe file</li>
-                        <li>Setup checklist</li>
-                        <li>Lead magnet bonus ideas</li>
-                        <li>Instant access once delivery is connected</li>
+                        <li>Complete video course (6+ hours)</li>
+                        <li>30-day action plan PDF</li>
+                        <li>Google Business Profile optimization guide</li>
+                        <li>Review request templates</li>
+                        <li>Citation building checklist</li>
+                        <li>Rank tracking spreadsheet</li>
+                        <li>Email support (30 days)</li>
                     </ul>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=softomatrix@gmail.com&su=Creator%20Funnel%20Access%20Request" target="_blank" rel="noopener noreferrer" class="cta-button">Request Access</a>
-                    <p style="color: var(--text-dim); font-size: 0.95rem; margin-top: 16px;">Stripe is not connected yet, so the CTA currently opens a placeholder instead of live checkout.</p>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Pro Package</h3>
+                    <div class="price">$497 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Core Playbook</li>
+                        <li>Done-for-you GMB optimization service</li>
+                        <li>Advanced review generation system</li>
+                        <li>Competitor analysis template</li>
+                        <li>Local link building strategy guide</li>
+                        <li>Monthly content calendar</li>
+                        <li>Priority email support (60 days)</li>
+                        <li>Private community access</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Get Pro Access</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Done-With-You</h3>
+                    <div class="price">$1,297 <span>one-time</span></div>
+                    <ul>
+                        <li>Everything in Pro Package</li>
+                        <li>2x 60-min strategy calls</li>
+                        <li>Custom action plan for your business</li>
+                        <li>Personal GMB audit & optimization</li>
+                        <li>Direct access via Slack (30 days)</li>
+                        <li>Monthly check-in calls (3 months)</li>
+                        <li>Guaranteed ranking improvement*</li>
+                    </ul>
+                    <a href="#" class="cta-button" onclick="alert('Stripe checkout coming in Stage 4')">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -735,41 +787,41 @@
     <!-- Guarantee Section -->
     <section class="guarantee">
         <div class="container">
-            <div class="guarantee-badge">✓</div>
-            <h2>Built for creators with an offer — not endless theory</h2>
-            <p>If you already have traffic, content, or audience attention but your conversion path feels scattered, this gives you the core structure to fix it.</p>
+            <div class="guarantee-badge">30</div>
+            <h2>30-Day "Rank or Refund" Guarantee</h2>
+            <p>Follow the playbook for 30 days. If you don't see measurable improvement in your Google Maps ranking, I'll refund every penny. No questions, no hassle. You either rank higher or you pay nothing.</p>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
-            <h2>Questions people usually ask</h2>
+            <h2>Frequently Asked Questions</h2>
             
             <div class="faq-container">
                 <div class="faq-item">
-                    <h3>Do I need paid ads?</h3>
-                    <p>No. This works behind organic traffic, email, content, or direct outreach.</p>
+                    <h3>Do I need any technical skills?</h3>
+                    <p>Absolutely not. If you can use Google and send emails, you can follow this playbook. I specifically designed it for business owners who hate technology.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I use this for coaching or consulting?</h3>
-                    <p>Yes. It’s designed for offer-based businesses that need a simple next-step flow.</p>
+                    <h3>How long until I see results?</h3>
+                    <p>Most businesses see ranking improvements within 2-3 weeks. By day 30, you should be significantly higher — often on page 1 or in the top 3 map results.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Do I need special software?</h3>
-                    <p>No. You can start simple and connect more tools later.</p>
+                    <h3>Will this work for my industry?</h3>
+                    <p>If you're a local service business (plumber, dentist, contractor, lawyer, realtor, restaurant, etc.), yes. The playbook is industry-agnostic but specifically designed for local service businesses.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Can I customize the pages?</h3>
-                    <p>Yes. Everything is meant to be adapted to your brand and offer.</p>
+                    <h3>What if I don't have a website?</h3>
+                    <p>You don't need one to start. Google Business Profile is free and often enough to rank #1. The playbook includes a simple website setup guide if you want one later.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Is checkout connected yet?</h3>
-                    <p>Not yet. For now, the CTA should route to an access request until Stripe is connected.</p>
+                    <h3>Is there a monthly fee?</h3>
+                    <p>No. This is a one-time purchase. You get lifetime access to the course and all future updates. No subscriptions, no hidden fees.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Who is this best for?</h3>
-                    <p>Creators, coaches, and consultants who already have an offer and want a cleaner handoff after the click.</p>
+                    <h3>What if my competitors are already doing SEO?</h3>
+                    <p>Perfect — that means there's proven demand. Most "SEO-optimized" local businesses are doing it wrong. You'll outrank them by doing the basics better than they do the advanced stuff.</p>
                 </div>
             </div>
         </div>
@@ -778,18 +830,16 @@
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Ready to turn your attention into a cleaner lead flow?</h2>
-            <p>Request access now and I’ll send the next steps.</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=softomatrix@gmail.com&su=Creator%20Funnel%20Access%20Request" target="_blank" rel="noopener noreferrer" class="cta-button">Request Access — $97</a>
+            <h2>Stop Being Invisible. Start Getting Calls.</h2>
+            <p>Every day you wait is another day your competitors book the jobs that should be yours. In 30 days, you could be #1 on Google Maps — or you could still be hoping the phone rings.</p>
+            <a href="#pricing" class="cta-button">Get Instant Access — $297</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="margin-bottom: 10px;">Replace the checkout URL and support email before going live.</p>
-            <p style="margin-bottom: 10px;">Questions? Contact <a href="mailto:softomatrix@gmail.com" style="color: #d7c8ff;">softomatrix@gmail.com</a></p>
-            <p>&copy; 2026 Creator Funnel-in-a-Box. All rights reserved.</p>
+            <p>&copy; 2026 Local SEO Domination Playbook. All rights reserved.</p>
         </div>
     </footer>
 </body>
